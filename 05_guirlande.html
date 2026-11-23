@@ -1,1 +1,198 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>5 — Guirlande ESP32</title><link rel="stylesheet" href="style.css"></head><body><header><h1>Vitrine de Noël interactive — Première SI</h1><p>Équipe C · 2 élèves · animations lumineuses</p></header><nav><a class="" href="index.html">Accueil</a><a class="" href="01_decoupage.html">1 · Découpage</a><a class="" href="02_ressources.html">2 · À fournir</a><a class="" href="03_carrousel.html">3 · Carrousel</a><a class="" href="04_automates.html">4 · Automates</a><a class="active" href="05_guirlande.html">5 · Guirlande</a><a class="" href="06_integration.html">6 · Intégration</a></nav><main><div class="christmas-banner">Projet collectif · Créativité, technologie et magie de Noël</div><div class="tools"><button onclick="sauvegarder()">Enregistrer mes réponses (HTML)</button><button class="secondary" onclick="imprimer()">Imprimer / PDF</button></div><h2>5 — Guirlande ESP32</h2><section><h2>Page réservée — contenu à définir</h2><p>Cette page est volontairement laissée en préparation. Le cahier des charges détaillé, le matériel, les documents de départ, les tâches chronologiques et les critères de validation seront définis ultérieurement.</p><h3>Points à préciser</h3><label class="task"><input type="checkbox"> <span>Matériel réellement disponible</span></label><label class="task"><input type="checkbox"> <span>Choix techniques retenus</span></label><label class="task"><input type="checkbox"> <span>Travail de conception laissé aux élèves</span></label><label class="task"><input type="checkbox"> <span>Découpage des 16 heures</span></label><label class="task"><input type="checkbox"> <span>Livrables et critères de validation</span></label><h3>Notes de préparation</h3><textarea placeholder="Décisions prises et ressources à ajouter…"></textarea></section></main><footer>Projet Première SI · 11 élèves · 16 heures · Batterie 12 V · Ø maximal 200 mm</footer><script src="app.js"></script></body></html>
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>5 — Guirlande lumineuse animée</title><link href="style.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+      <h1>
+        Vitrine de Noël interactive — Première SI
+      </h1>
+      <p>
+        Équipe C · 2 élèves · 16 heures
+      </p>
+    </header>
+    <nav>
+      <a class="" href="index.html">Accueil</a><a class="" href="01_decoupage.html">1 · Découpage</a><a class="" href="02_ressources.html">2 · À fournir</a><a class="" href="03_carrousel.html">3 · Carrousel</a><a class="" href="04_automates.html">4 · Automates</a><a class="active" href="05_guirlande.html">5 · Guirlande</a><a class="" href="06_integration.html">6 · Intégration</a>
+    </nav>
+    <main>
+      <div class="christmas-banner">
+        Huit ampoules, huit relais et une animation de Noël pilotée par ESP32
+      </div>
+      <div class="tools">
+        <button onclick="sauvegarder()">Enregistrer mes réponses (HTML)</button><button class="secondary" onclick="imprimer()">Imprimer / PDF</button>
+      </div>
+      <h2>
+        5 — Guirlande lumineuse animée
+      </h2>
+      <section>
+        <h2>
+          Votre mission
+        </h2>
+        <p>
+          Vous disposez d’une <strong>carte ESP32 Dev Module</strong>, d’un <strong>module de 8 relais</strong>, de <strong>8 douilles</strong> et de <strong>8 ampoules colorées fonctionnant sous 12 V</strong>. Réalisez une guirlande lumineuse animée pour la vitrine de Noël. L’ensemble est alimenté par une batterie 12 V.
+        </p>
+        <p>
+          Vous devez concevoir l’interconnexion des composants, choisir la disposition des ampoules dans la vitrine, câbler l’ensemble et programmer l’ESP32 avec l’IDE Arduino pour produire une belle animation lumineuse.
+        </p>
+        <p>
+          <span class="pill">2 élèves</span><span class="pill">16 heures</span><span class="pill">8 ampoules 12 V</span><span class="pill">8 relais</span><span class="pill">ESP32</span>
+        </p>
+        <div class="warn">
+          <strong>Attention :</strong> la batterie alimente les ampoules en 12 V, mais l’ESP32 ne doit jamais recevoir directement 12 V sur ses broches. Prévoir un convertisseur adapté et vérifier la tension d’alimentation, la compatibilité des entrées du module relais avec les sorties 3,3 V de l’ESP32, ainsi que les courants admissibles. Les relais doivent être adaptés au courant et au type de charge des ampoules.
+        </div>
+      </section>
+      <section>
+        <h2>
+          1. Matériel disponible — observer et identifier
+        </h2>
+        <div class="material-grid">
+          <figure class="material">
+            <img alt="Carte ESP32 Dev Module" src="images/ESP32.jpg"/>
+            <figcaption>
+              <strong>ESP32 Dev Module</strong><br/>Programmer la séquence d’animation et piloter les relais.
+            </figcaption>
+          </figure>
+          <figure class="material">
+            <img alt="Module électronique à huit relais" src="images/8-relais.png"/>
+            <figcaption>
+              <strong>Module 8 relais</strong><br/>Commuter séparément l’alimentation de chacune des ampoules.
+            </figcaption>
+          </figure>
+          <figure class="material">
+            <img alt="Ampoules LED colorées" src="images/Ampoules LED.png"/>
+            <figcaption>
+              <strong>Ampoules LED colorées 12 V</strong><br/>Constituer les huit points lumineux de la guirlande.
+            </figcaption>
+          </figure>
+          <figure class="material">
+            <img alt="Douilles avec fils de connexion" src="images/douilles.png"/>
+            <figcaption>
+              <strong>8 douilles</strong><br/>Fixer les ampoules et assurer leur connexion électrique.
+            </figcaption>
+          </figure>
+        </div>
+        <p class="muted">
+          Les images présentent le matériel de référence. Vérifier les inscriptions et fiches techniques des composants réels avant le câblage.
+        </p>
+      </section>
+      <section>
+        <h2>
+          2. Organisation du binôme
+        </h2>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Élève</th><th>Responsabilité principale</th><th>Participation commune</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>C1</td><td>Implantation des huit ampoules, schéma électrique, fixation des douilles et câblage 12 V.</td><td>Tests de commande, mesures et dossier.</td>
+              </tr>
+              <tr>
+                <td>C2</td><td>Repérage des broches ESP32, programmation des huit sorties et mise au point des séquences.</td><td>Contrôle du câblage, implantation et dossier.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Les deux élèves participent aux essais, à la validation et à la présentation orale.
+        </p>
+      </section>
+      <section>
+        <h2>
+          3. Planning chronologique — 16 heures
+        </h2>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Semaine</th><th>Durée</th><th>Travaux à réaliser</th><th>Livrable / validation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="3"><strong>S1 — Analyser</strong></td><td>1 h</td><td>Identifier les quatre types de composants ; relever tensions, courants et bornes utiles.</td><td>Tableau de caractéristiques.</td>
+              </tr>
+              <tr>
+                <td>1 h 30</td><td>Proposer une disposition de 8 ampoules et la transmettre à l’équipe D.</td><td>Croquis d’implantation coté.</td>
+              </tr>
+              <tr>
+                <td>1 h 30</td><td>Élaborer un schéma de principe ; tester une sortie ESP32 et un relais sur une alimentation de laboratoire protégée.</td><td>Essai d’une ampoule commandée.</td>
+              </tr>
+              <tr>
+                <td rowspan="3"><strong>S2 — Concevoir</strong></td><td>1 h 30</td><td>Établir le schéma complet des 8 voies : commande, relais, ampoules et alimentation.</td><td>Schéma annoté validé.</td>
+              </tr>
+              <tr>
+                <td>1 h 30</td><td>Programmer une séquence simple : allumage successif puis extinction.</td><td>Premier programme commenté.</td>
+              </tr>
+              <tr>
+                <td>1 h</td><td>Tester les voies, repérer les connecteurs et vérifier les fixations des douilles.</td><td>Tableau de correspondance broche/relais/ampoule.</td>
+              </tr>
+              <tr>
+                <td rowspan="3"><strong>S3 — Réaliser</strong></td><td>1 h 30</td><td>Réaliser le câblage des huit ampoules et du module relais hors tension.</td><td>Câblage contrôlé.</td>
+              </tr>
+              <tr>
+                <td>1 h 30</td><td>Programmer plusieurs animations : chenillard, alternance, séquence festive.</td><td>Trois effets démontrés.</td>
+              </tr>
+              <tr>
+                <td>1 h</td><td>Tester toutes les voies, corriger les défauts et mesurer le courant total.</td><td>Fiche d’essais.</td>
+              </tr>
+              <tr>
+                <td rowspan="3"><strong>S4 — Intégrer</strong></td><td>1 h 30</td><td>Installer les douilles dans la vitrine avec D ; fixer les fils et raccorder la distribution.</td><td>Montage intégré.</td>
+              </tr>
+              <tr>
+                <td>1 h 30</td><td>Tester les effets avec l’alimentation générale, régler les temporisations et valider l’arrêt.</td><td>Guirlande fonctionnelle et sûre.</td>
+              </tr>
+              <tr>
+                <td>1 h</td><td>Finaliser schéma, code commenté, mesures et présentation de 5 minutes.</td><td>Dossier et oral.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section>
+        <h2>
+          4. Questions de conception
+        </h2>
+        <p>
+          Comment répartir les huit ampoules pour que l’animation soit visible sans gêner le carrousel ni les automates ?
+        </p>
+        <textarea placeholder="Croquis, dimensions et choix d’implantation…"></textarea>
+        <p>
+          Quelle broche de l’ESP32 commande chaque relais ? Comment repérer les huit voies ?
+        </p>
+        <textarea placeholder="Tableau GPIO / relais / ampoule…"></textarea>
+        <p>
+          Quelles séquences d’allumage proposez-vous et quels délais utilisez-vous ?
+        </p>
+        <textarea placeholder="Description ou algorithme des animations…"></textarea>
+        <p>
+          Comment vérifiez-vous que l’alimentation et les relais sont adaptés ?
+        </p>
+        <textarea placeholder="Tensions, courants mesurés, vérifications…"></textarea>
+      </section>
+      <section>
+        <h2>
+          5. Sécurité et validation
+        </h2>
+        <div class="warn">
+          Le 12 V des ampoules passe par les contacts de puissance des relais. Les broches GPIO ne doivent alimenter ni les ampoules ni les bobines des relais directement. Le module doit posséder une interface de commande compatible avec l’ESP32. Les branchements et les protections sont vérifiés par l’enseignant avant la connexion à la batterie.
+        </div>
+        
+        <label class="task"><input type="checkbox"/><span>Les caractéristiques électriques sont vérifiées sur le matériel réel.</span></label><label class="task"><input type="checkbox"/><span>Les huit douilles sont correctement fixées et isolées.</span></label><label class="task"><input type="checkbox"/><span>Les huit voies relais sont repérées et commandables séparément.</span></label><label class="task"><input type="checkbox"/><span>La tension de l’ESP32 et celle du module relais sont adaptées.</span></label><label class="task"><input type="checkbox"/><span>Les circuits sont protégés et aucun fil nu n’est accessible.</span></label><label class="task"><input type="checkbox"/><span>Trois animations lumineuses sont opérationnelles.</span></label><label class="task"><input type="checkbox"/><span>Le fonctionnement simultané et l’arrêt général sont validés.</span></label><label class="task"><input type="checkbox"/><span>Schéma, programme commenté et fiche d’essais sont remis.</span></label>
+        <h3>
+          Résultats des essais
+        </h3>
+        <textarea placeholder="Tensions, courant total, voies testées, séquences, anomalies et corrections…"></textarea>
+      </section>
+    </main>
+    <footer>
+      Projet Première SI · 11 élèves · 16 heures · Batterie 12 V · Ø maximal 200 mm
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

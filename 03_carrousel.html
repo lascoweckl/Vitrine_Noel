@@ -1,1 +1,204 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>3 — Mission Carrousel</title><link rel="stylesheet" href="style.css"></head><body><header><h1>Vitrine de Noël interactive — Première SI</h1><p>Équipe A · 3 élèves · 16 heures</p></header><nav><a class="" href="index.html">Accueil</a><a class="" href="01_decoupage.html">1 · Découpage</a><a class="" href="02_ressources.html">2 · À fournir</a><a class="active" href="03_carrousel.html">3 · Carrousel</a><a class="" href="04_automates.html">4 · Automates</a><a class="" href="05_guirlande.html">5 · Guirlande</a><a class="" href="06_integration.html">6 · Intégration</a></nav><main><div class="christmas-banner">Projet collectif · Créativité, technologie et magie de Noël</div><div class="tools"><button onclick="sauvegarder()">Enregistrer mes réponses (HTML)</button><button class="secondary" onclick="imprimer()">Imprimer / PDF</button></div><h2>3 — Mission Carrousel</h2><section><h2>Support de rétroconception</h2><p>Observer les étapes de la vidéo fournie. Le montage montre un socle, un tube central, un moteur, un plateau, une toiture, des poteaux et des silhouettes de chevaux. Les dimensions et les détails des liaisons ne sont pas donnés.</p><img class="sheet" src="carrousel_etapes_video.jpg" alt="Planche chronologique extraite de la vidéo du carrousel"><p class="muted">Captures extraites de la vidéo de référence : progression de 0,2 à 9,8 secondes.</p></section><section><h2>Chronologie visible dans la vidéo</h2><div class="scroll"><table><thead><tr><th>Temps indicatif</th><th>Opération observée</th><th>Question à se poser</th></tr></thead><tbody><tr><td>0–2 s</td><td>Préparation des pièces et collage du tube sur le disque inférieur</td><td>Quel est le rôle du tube ?</td></tr><tr><td>2–3 s</td><td>Positionnement du petit moteur en haut du tube</td><td>Comment immobiliser le corps du moteur ?</td></tr><tr><td>3–4 s</td><td>Mise en place du disque sur l’axe moteur</td><td>Comment transmettre le couple ?</td></tr><tr><td>4–5 s</td><td>Montage du socle et du circuit d’alimentation</td><td>Que faut-il modifier pour une batterie commune 12 V ?</td></tr><tr><td>5–6 s</td><td>Ajout de la toiture conique</td><td>La toiture est-elle fixe ou mobile ? À vérifier.</td></tr><tr><td>6–7 s</td><td>Installation des poteaux périphériques</td><td>Quelles pièces relient-ils ?</td></tr><tr><td>7–8 s</td><td>Mise en place des chevaux</td><td>Comment équilibrer la masse ?</td></tr><tr><td>8–10 s</td><td>Démonstration du manège en rotation</td><td>Quelle partie tourne exactement ?</td></tr></tbody></table></div></section><section><h2>Planning de travail</h2><div class="scroll"><table><thead><tr><th>Semaine</th><th>Durée</th><th>Tâche / sous-tâches</th><th>Livrable / validation</th></tr></thead><tbody><tr><td>S1</td><td>0 h 45</td><td>Observer la vidéo ; repérer pièces fixes, mobiles et fonctions</td><td>Schéma annoté</td></tr><tr><td>S1</td><td>0 h 45</td><td>Dessiner le carrousel ; fixer le diamètre disponible avec D</td><td>Croquis coté</td></tr><tr><td>S1</td><td>1 h</td><td>Choisir les liaisons et la transmission moteur–plateau</td><td>Schéma mécanique</td></tr><tr><td>S1</td><td>1 h 30</td><td>Tester le motoréducteur, vitesse et charge légère</td><td>Fiche d’essais</td></tr><tr><td>S2</td><td>2 h</td><td>Dessiner disques, support, éléments décoratifs sur SolidWorks</td><td>Pièces 3D</td></tr><tr><td>S2</td><td>1 h</td><td>Assembler numériquement, vérifier jeux et hauteur</td><td>Assemblage vérifié</td></tr><tr><td>S2</td><td>1 h</td><td>Exporter DXF et découper une pièce critique</td><td>Prototype</td></tr><tr><td>S3</td><td>1 h 30</td><td>Découper et assembler les pièces définitives</td><td>Structure assemblée</td></tr><tr><td>S3</td><td>1 h</td><td>Installer moteur, axe et accouplement</td><td>Rotation manuelle libre</td></tr><tr><td>S3</td><td>1 h</td><td>Réaliser commande et programme de rotation</td><td>Commande testée</td></tr><tr><td>S3</td><td>0 h 30</td><td>Corriger frottements et déséquilibre</td><td>Essai fonctionnel</td></tr><tr><td>S4</td><td>1 h</td><td>Fixer le carrousel dans la vitrine avec D</td><td>Montage intégré</td></tr><tr><td>S4</td><td>1 h</td><td>Tester sous alimentation commune, mesurer le courant</td><td>Essai validé</td></tr><tr><td>S4</td><td>1 h</td><td>Finaliser CAO, DXF, programme et fiche d’essais</td><td>Dossier</td></tr><tr><td>S4</td><td>1 h</td><td>Préparer et effectuer la restitution collective</td><td>Oral de 5 min</td></tr></tbody></table></div></section><section><h2>Répartition des 3 élèves</h2><div class="scroll"><table><thead><tr><th>Élève</th><th>Responsabilité principale</th><th>Participation transversale</th></tr></thead><tbody><tr><td>A1</td><td>Modélisation SolidWorks, dimensions et assemblage</td><td>Découpe et essais</td></tr><tr><td>A2</td><td>Fichiers DXF, découpe laser, fabrication et montage</td><td>CAO et validation</td></tr><tr><td>A3</td><td>Motoréducteur, commande, programme et mesures</td><td>Fixations et assemblage</td></tr></tbody></table></div></section><section><h2>Questions de conception</h2><p>1. Quelles pièces sont fixes et lesquelles tournent ?</p><textarea placeholder="Réponse, schéma ou observations…"></textarea><p>2. Comment relier l’axe du moteur au plateau sans patinage ?</p><textarea placeholder="Proposition de liaison…"></textarea><p>3. Comment limiter le frottement et assurer l’équilibrage ?</p><textarea placeholder="Choix techniques et essais…"></textarea><p>4. Comment obtenir la toiture conique à partir d’un dessin à plat ?</p><textarea placeholder="Développement, dimensions, languette…"></textarea></section><section><h2>Contrôle final du carrousel</h2><label class="task"><input type="checkbox"> <span>Diamètre compatible avec la vitrine</span></label><label class="task"><input type="checkbox"> <span>Plateau et éléments solidement assemblés</span></label><label class="task"><input type="checkbox"> <span>Rotation libre sans frottement excessif</span></label><label class="task"><input type="checkbox"> <span>Aucun câble ne touche les pièces mobiles</span></label><label class="task"><input type="checkbox"> <span>Moteur alimenté à sa tension nominale, jamais directement à 12 V sans compatibilité vérifiée</span></label><label class="task"><input type="checkbox"> <span>Commande marche/arrêt opérationnelle</span></label><label class="task"><input type="checkbox"> <span>Essai continu réussi et courant mesuré</span></label><label class="task"><input type="checkbox"> <span>SolidWorks, DXF, programme et dossier remis</span></label><h3>Résultats des essais</h3><textarea placeholder="Tension : … V ; courant : … A ; vitesse : … tr/min ; durée : … ; observations : …"></textarea></section></main><footer>Projet Première SI · 11 élèves · 16 heures · Batterie 12 V · Ø maximal 200 mm</footer><script src="app.js"></script></body></html>
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>3 — Mission Carrousel</title><link href="style.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+      <h1>
+        Vitrine de Noël interactive — Première SI
+      </h1>
+      <p>
+        Équipe A · 3 élèves · 16 heures
+      </p>
+    </header>
+    <nav>
+      <a class="" href="index.html">Accueil</a><a class="" href="01_decoupage.html">1 · Découpage</a><a class="" href="02_ressources.html">2 · À fournir</a><a class="active" href="03_carrousel.html">3 · Carrousel</a><a class="" href="04_automates.html">4 · Automates</a><a class="" href="05_guirlande.html">5 · Guirlande</a><a class="" href="06_integration.html">6 · Intégration</a>
+    </nav>
+    <main>
+      <div class="christmas-banner">
+        Projet collectif · Créativité, technologie et magie de Noël
+      </div>
+      <div class="tools">
+        <button onclick="sauvegarder()">Enregistrer mes réponses (HTML)</button><button class="secondary" onclick="imprimer()">Imprimer / PDF</button>
+      </div>
+      <h2>
+        3 — Mission Carrousel
+      </h2>
+      <section>
+        <h2>
+          Support de rétroconception
+        </h2>
+        <p>
+          Observer les étapes de la vidéo fournie. Le montage montre un socle, un tube central, un moteur, un plateau, une toiture, des poteaux et des silhouettes de chevaux. Les dimensions et les détails des liaisons ne sont pas donnés.
+        </p>
+        <img alt="Planche chronologique extraite de la vidéo du carrousel" class="sheet" src="images/carrousel_etapes_video.jpg"/>
+        <p class="muted">
+          Captures extraites de la vidéo de référence : progression de 0,2 à 9,8 secondes.
+        </p>
+      </section>
+      <section>
+        <h2>
+          Chronologie visible dans la vidéo
+        </h2>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Temps indicatif</th><th>Opération observée</th><th>Question à se poser</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0–2 s</td><td>Préparation des pièces et collage du tube sur le disque inférieur</td><td>Quel est le rôle du tube ?</td>
+              </tr>
+              <tr>
+                <td>2–3 s</td><td>Positionnement du petit moteur en haut du tube</td><td>Comment immobiliser le corps du moteur ?</td>
+              </tr>
+              <tr>
+                <td>3–4 s</td><td>Mise en place du disque sur l’axe moteur</td><td>Comment transmettre le couple ?</td>
+              </tr>
+              <tr>
+                <td>4–5 s</td><td>Montage du socle et du circuit d’alimentation</td><td>Que faut-il modifier pour une batterie commune 12 V ?</td>
+              </tr>
+              <tr>
+                <td>5–6 s</td><td>Ajout de la toiture conique</td><td>La toiture est-elle fixe ou mobile ? À vérifier.</td>
+              </tr>
+              <tr>
+                <td>6–7 s</td><td>Installation des poteaux périphériques</td><td>Quelles pièces relient-ils ?</td>
+              </tr>
+              <tr>
+                <td>7–8 s</td><td>Mise en place des chevaux</td><td>Comment équilibrer la masse ?</td>
+              </tr>
+              <tr>
+                <td>8–10 s</td><td>Démonstration du manège en rotation</td><td>Quelle partie tourne exactement ?</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section>
+        <h2>
+          Planning de travail
+        </h2>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Semaine</th><th>Durée</th><th>Tâche / sous-tâches</th><th>Livrable / validation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>S1</td><td>0 h 45</td><td>Observer la vidéo ; repérer pièces fixes, mobiles et fonctions</td><td>Schéma annoté</td>
+              </tr>
+              <tr>
+                <td>S1</td><td>0 h 45</td><td>Dessiner le carrousel ; fixer le diamètre disponible avec D</td><td>Croquis coté</td>
+              </tr>
+              <tr>
+                <td>S1</td><td>1 h</td><td>Choisir les liaisons et la transmission moteur–plateau</td><td>Schéma mécanique</td>
+              </tr>
+              <tr>
+                <td>S1</td><td>1 h 30</td><td>Tester le motoréducteur, vitesse et charge légère</td><td>Fiche d’essais</td>
+              </tr>
+              <tr>
+                <td>S2</td><td>2 h</td><td>Dessiner disques, support, éléments décoratifs sur SolidWorks</td><td>Pièces 3D</td>
+              </tr>
+              <tr>
+                <td>S2</td><td>1 h</td><td>Assembler numériquement, vérifier jeux et hauteur</td><td>Assemblage vérifié</td>
+              </tr>
+              <tr>
+                <td>S2</td><td>1 h</td><td>Exporter DXF et découper une pièce critique</td><td>Prototype</td>
+              </tr>
+              <tr>
+                <td>S3</td><td>1 h 30</td><td>Découper et assembler les pièces définitives</td><td>Structure assemblée</td>
+              </tr>
+              <tr>
+                <td>S3</td><td>1 h</td><td>Installer moteur, axe et accouplement</td><td>Rotation manuelle libre</td>
+              </tr>
+              <tr>
+                <td>S3</td><td>1 h</td><td>Réaliser commande et programme de rotation</td><td>Commande testée</td>
+              </tr>
+              <tr>
+                <td>S3</td><td>0 h 30</td><td>Corriger frottements et déséquilibre</td><td>Essai fonctionnel</td>
+              </tr>
+              <tr>
+                <td>S4</td><td>1 h</td><td>Fixer le carrousel dans la vitrine avec D</td><td>Montage intégré</td>
+              </tr>
+              <tr>
+                <td>S4</td><td>1 h</td><td>Tester sous alimentation commune, mesurer le courant</td><td>Essai validé</td>
+              </tr>
+              <tr>
+                <td>S4</td><td>1 h</td><td>Finaliser CAO, DXF, programme et fiche d’essais</td><td>Dossier</td>
+              </tr>
+              <tr>
+                <td>S4</td><td>1 h</td><td>Préparer et effectuer la restitution collective</td><td>Oral de 5 min</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section>
+        <h2>
+          Répartition des 3 élèves
+        </h2>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Élève</th><th>Responsabilité principale</th><th>Participation transversale</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>A1</td><td>Modélisation SolidWorks, dimensions et assemblage</td><td>Découpe et essais</td>
+              </tr>
+              <tr>
+                <td>A2</td><td>Fichiers DXF, découpe laser, fabrication et montage</td><td>CAO et validation</td>
+              </tr>
+              <tr>
+                <td>A3</td><td>Motoréducteur, commande, programme et mesures</td><td>Fixations et assemblage</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section>
+        <h2>
+          Questions de conception
+        </h2>
+        <p>
+          1. Quelles pièces sont fixes et lesquelles tournent ?
+        </p>
+        <textarea placeholder="Réponse, schéma ou observations…"></textarea>
+        <p>
+          2. Comment relier l’axe du moteur au plateau sans patinage ?
+        </p>
+        <textarea placeholder="Proposition de liaison…"></textarea>
+        <p>
+          3. Comment limiter le frottement et assurer l’équilibrage ?
+        </p>
+        <textarea placeholder="Choix techniques et essais…"></textarea>
+        <p>
+          4. Comment obtenir la toiture conique à partir d’un dessin à plat ?
+        </p>
+        <textarea placeholder="Développement, dimensions, languette…"></textarea>
+      </section>
+      <section>
+        <h2>
+          Contrôle final du carrousel
+        </h2>
+        <label class="task"><input type="checkbox"/> <span>Diamètre compatible avec la vitrine</span></label><label class="task"><input type="checkbox"/> <span>Plateau et éléments solidement assemblés</span></label><label class="task"><input type="checkbox"/> <span>Rotation libre sans frottement excessif</span></label><label class="task"><input type="checkbox"/> <span>Aucun câble ne touche les pièces mobiles</span></label><label class="task"><input type="checkbox"/> <span>Moteur alimenté à sa tension nominale, jamais directement à 12 V sans compatibilité vérifiée</span></label><label class="task"><input type="checkbox"/> <span>Commande marche/arrêt opérationnelle</span></label><label class="task"><input type="checkbox"/> <span>Essai continu réussi et courant mesuré</span></label><label class="task"><input type="checkbox"/> <span>SolidWorks, DXF, programme et dossier remis</span></label>
+        <h3>
+          Résultats des essais
+        </h3>
+        <textarea placeholder="Tension : … V ; courant : … A ; vitesse : … tr/min ; durée : … ; observations : …"></textarea>
+      </section>
+    </main>
+    <footer>
+      Projet Première SI · 11 élèves · 16 heures · Batterie 12 V · Ø maximal 200 mm
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

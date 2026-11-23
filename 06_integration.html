@@ -1,1 +1,229 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>6 — Structure et intégration</title><link rel="stylesheet" href="style.css"></head><body><header><h1>Vitrine de Noël interactive — Première SI</h1><p>Équipe D · 2 élèves · coordination générale</p></header><nav><a class="" href="index.html">Accueil</a><a class="" href="01_decoupage.html">1 · Découpage</a><a class="" href="02_ressources.html">2 · À fournir</a><a class="" href="03_carrousel.html">3 · Carrousel</a><a class="" href="04_automates.html">4 · Automates</a><a class="" href="05_guirlande.html">5 · Guirlande</a><a class="active" href="06_integration.html">6 · Intégration</a></nav><main><div class="christmas-banner">Projet collectif · Créativité, technologie et magie de Noël</div><div class="tools"><button onclick="sauvegarder()">Enregistrer mes réponses (HTML)</button><button class="secondary" onclick="imprimer()">Imprimer / PDF</button></div><h2>6 — Structure et intégration</h2><section><h2>Page réservée — contenu à définir</h2><p>Cette page est volontairement laissée en préparation. Le cahier des charges détaillé, le matériel, les documents de départ, les tâches chronologiques et les critères de validation seront définis ultérieurement.</p><h3>Points à préciser</h3><label class="task"><input type="checkbox"> <span>Matériel réellement disponible</span></label><label class="task"><input type="checkbox"> <span>Choix techniques retenus</span></label><label class="task"><input type="checkbox"> <span>Travail de conception laissé aux élèves</span></label><label class="task"><input type="checkbox"> <span>Découpage des 16 heures</span></label><label class="task"><input type="checkbox"> <span>Livrables et critères de validation</span></label><h3>Notes de préparation</h3><textarea placeholder="Décisions prises et ressources à ajouter…"></textarea></section></main><footer>Projet Première SI · 11 élèves · 16 heures · Batterie 12 V · Ø maximal 200 mm</footer><script src="app.js"></script></body></html>
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>6 — Structure et intégration de la vitrine</title><link href="style.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <header>
+      <h1>
+        Vitrine de Noël interactive — Première SI
+      </h1>
+      <p>
+        Équipe D · 2 élèves · 16 heures
+      </p>
+    </header>
+    <nav>
+      <a class="" href="index.html">Accueil</a><a class="" href="01_decoupage.html">1 · Découpage</a><a class="" href="02_ressources.html">2 · À fournir</a><a class="" href="03_carrousel.html">3 · Carrousel</a><a class="" href="04_automates.html">4 · Automates</a><a class="" href="05_guirlande.html">5 · Guirlande</a><a class="active" href="06_integration.html">6 · Intégration</a>
+    </nav>
+    <main>
+      <div class="christmas-banner">
+        Une vitrine commune pour le carrousel, les automates et la guirlande
+      </div>
+      <div class="tools">
+        <button onclick="sauvegarder()">Enregistrer mes réponses (HTML)</button><button class="secondary" onclick="imprimer()">Imprimer / PDF</button>
+      </div>
+      <h2>
+        6 — Structure et intégration de la vitrine
+      </h2>
+      <section>
+        <h2>
+          Votre mission
+        </h2>
+        <p>
+          Vous êtes chargés de concevoir et d’organiser l’intégration des <strong>trois sous-systèmes</strong> dans une seule vitrine : carrousel motorisé, deux automates animés et guirlande de huit ampoules. Vous devez aussi intégrer l’<strong>alimentation commune par batterie 12 V</strong>, sa protection, la distribution et l’interrupteur général.
+        </p>
+        <figure class="hero-figure">
+          <img alt="Baie vitrée servant de référence pour la vitrine de Noël" src="images/baie_vitrine.jpg"/>
+          <figcaption>
+            Baie vitrée de référence : étudier l’emplacement et la présentation des réalisations.
+          </figcaption>
+        </figure>
+        <p>
+          <span class="pill">2 élèves</span><span class="pill">16 heures</span><span class="pill">Ø maximal 200 mm pour l’ensemble miniature</span><span class="pill">Batterie 12 V unique</span>
+        </p>
+        <div class="warn">
+          Le gabarit Ø 200 mm concerne l’ensemble miniature à réaliser. Vérifiez avec l’enseignant comment il sera présenté dans la baie vitrée illustrée. La batterie peut nécessiter un emplacement séparé et protégé : son encombrement et sa sécurité doivent être validés avant toute fabrication.
+        </div>
+      </section>
+      <section>
+        <h2>
+          1. Trois sous-systèmes à intégrer
+        </h2>
+        <div class="integration-grid">
+          <article>
+            <h3>
+              A — Carrousel
+            </h3>
+            <img alt="Étapes de fabrication du carrousel" src="images/carrousel_etapes_video.jpg"/>
+            <p>
+              Réserver une zone pour le plateau tournant, le moteur et les fixations. Vérifier que rien ne touche les pièces en rotation.
+            </p>
+            <a href="03_carrousel.html">Consulter la mission Carrousel</a>
+          </article>
+          <article>
+            <h3>
+              B — Automates
+            </h3>
+            <img alt="Silhouette de cerf" src="images/cerf-2.png"/>
+            <p>
+              Prévoir l’emplacement des deux personnages, leurs servomoteurs, les axes et les débattements.
+            </p>
+            <a href="04_automates.html">Consulter la mission Automates</a>
+          </article>
+          <article>
+            <h3>
+              C — Guirlande
+            </h3>
+            <img alt="Ampoules colorées de la guirlande" src="images/Ampoules LED.png"/>
+            <p>
+              Placer les huit douilles, organiser les fils et garantir une bonne visibilité des animations.
+            </p>
+            <a href="05_guirlande.html">Consulter la mission Guirlande</a>
+          </article>
+        </div>
+      </section>
+      <section>
+        <h2>
+          2. Coordination : fiche d’interface à recueillir
+        </h2>
+        <p>
+          Chaque équipe doit vous transmettre les informations suivantes <strong>dès la semaine 1</strong>.
+        </p>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Équipe</th><th>Dimensions / débattements</th><th>Fixations</th><th>Alimentation / connexions</th><th>Échéance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>A — Carrousel</td><td>Diamètre, hauteur, volume balayé</td><td>Socle et support moteur</td><td>Tension et courant moteur</td><td>Fin S1</td>
+              </tr>
+              <tr>
+                <td>B — Automates</td><td>Dimensions des deux silhouettes, mouvements</td><td>Supports et axes</td><td>Alimentation des servos et commande</td><td>Fin S1</td>
+              </tr>
+              <tr>
+                <td>C — Guirlande</td><td>Positions des 8 ampoules et douilles</td><td>Points de fixation et passages de fils</td><td>12 V ampoules, alimentation logique, relais</td><td>Fin S1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>
+          Décisions communes
+        </h3>
+        <textarea placeholder="Implantation retenue, cotes, contraintes et décisions avec A, B et C…"></textarea>
+      </section>
+      <section>
+        <h2>
+          3. Planning chronologique — 16 heures
+        </h2>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Semaine</th><th>Durée</th><th>Travaux à réaliser</th><th>Livrable / validation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="3"><strong>S1 — Organiser</strong></td><td>1 h 30</td><td>Étudier la baie, le gabarit Ø 200 mm et les zones nécessaires aux trois équipes.</td><td>Croquis d’implantation coté.</td>
+              </tr>
+              <tr>
+                <td>1 h 30</td><td>Recueillir les interfaces et proposer un plan d’ensemble avec passages de câbles.</td><td>Plan validé avec A, B et C.</td>
+              </tr>
+              <tr>
+                <td>1 h</td><td>Définir la distribution 12 V, les convertisseurs nécessaires, les protections et l’arrêt général.</td><td>Schéma de principe à faire valider.</td>
+              </tr>
+              <tr>
+                <td rowspan="3"><strong>S2 — Concevoir</strong></td><td>2 h</td><td>Modéliser le socle, les supports et les fixations sur SolidWorks.</td><td>CAO et encombrements vérifiés.</td>
+              </tr>
+              <tr>
+                <td>1 h</td><td>Préparer les découpes et réaliser un prototype de fixation.</td><td>DXF et prototype.</td>
+              </tr>
+              <tr>
+                <td>1 h</td><td>Établir le schéma électrique général, repérer les connecteurs et valider les protections.</td><td>Schéma électrique contrôlé.</td>
+              </tr>
+              <tr>
+                <td rowspan="3"><strong>S3 — Préparer</strong></td><td>1 h 30</td><td>Fabriquer et assembler le support commun ; préparer les points de fixation.</td><td>Structure stable.</td>
+              </tr>
+              <tr>
+                <td>1 h 30</td><td>Installer la distribution hors tension : fusible, interrupteur, convertisseurs, connectique.</td><td>Montage électrique vérifié.</td>
+              </tr>
+              <tr>
+                <td>1 h</td><td>Effectuer une intégration à blanc des trois sous-systèmes avec leurs équipes.</td><td>Encombrement et accès validés.</td>
+              </tr>
+              <tr>
+                <td rowspan="3"><strong>S4 — Intégrer</strong></td><td>1 h 30</td><td>Fixer carrousel, automates et guirlande ; organiser les fils et raccordements.</td><td>Ensemble assemblé.</td>
+              </tr>
+              <tr>
+                <td>1 h 30</td><td>Avec l’enseignant, vérifier sécurité et tensions puis tester l’ensemble sur batterie.</td><td>Fonctionnement simultané validé.</td>
+              </tr>
+              <tr>
+                <td>1 h</td><td>Finaliser plan, schéma, résultats d’essais et présentation orale de 5 minutes.</td><td>Dossier technique et démonstration.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section>
+        <h2>
+          4. Répartition du binôme
+        </h2>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Élève</th><th>Responsabilité principale</th><th>Travail partagé</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>D1</td><td>CAO du socle, implantation, fixations et assemblage.</td><td>Interfaces, intégration et essais.</td>
+              </tr>
+              <tr>
+                <td>D2</td><td>Schéma électrique, protections, connectique et distribution.</td><td>Implantation, intégration et essais.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section>
+        <h2>
+          5. Questions à résoudre
+        </h2>
+        <p>
+          Comment répartir les trois sous-systèmes dans le diamètre maximal disponible ?
+        </p>
+        <textarea placeholder="Plan d’implantation, cotes, zones de mouvement…"></textarea>
+        <p>
+          Comment fixer les éléments pour pouvoir les démonter et les réparer ?
+        </p>
+        <textarea placeholder="Supports, vis, passages de câbles, accès…"></textarea>
+        <p>
+          Comment alimenter tous les circuits depuis une batterie 12 V sans appliquer 12 V aux composants incompatibles ?
+        </p>
+        <textarea placeholder="Distribution, convertisseurs, protections et repérages…"></textarea>
+      </section>
+      <section>
+        <h2>
+          6. Sécurité et réception finale
+        </h2>
+        <div class="warn">
+          <strong>La batterie de voiture peut délivrer un courant de court-circuit très élevé.</strong> Elle doit être immobilisée et protégée contre les contacts accidentels. Installer un fusible principal au plus près de sa borne positive, dimensionné en fonction du câblage et des charges, ainsi que des protections de branches si nécessaire. Effectuer les contrôles hors tension ; le raccordement final se fait sous la supervision de l’enseignant. Ne pas charger une batterie au plomb pendant les manipulations et maintenir une ventilation adaptée.
+        </div>
+        
+        <label class="task"><input type="checkbox"/><span>Les interfaces des équipes A, B et C sont validées.</span></label><label class="task"><input type="checkbox"/><span>La structure est stable et respecte le gabarit convenu.</span></label><label class="task"><input type="checkbox"/><span>Les pièces mobiles ne touchent ni fils ni décors.</span></label><label class="task"><input type="checkbox"/><span>Le fusible principal et l’interrupteur général sont installés et contrôlés.</span></label><label class="task"><input type="checkbox"/><span>Les tensions de chaque branche sont conformes aux composants.</span></label><label class="task"><input type="checkbox"/><span>La batterie et les connexions sont immobilisées, isolées et protégées.</span></label><label class="task"><input type="checkbox"/><span>Carrousel, automates et guirlande fonctionnent simultanément.</span></label><label class="task"><input type="checkbox"/><span>L’arrêt général coupe l’ensemble des fonctions.</span></label><label class="task"><input type="checkbox"/><span>Un essai continu est réalisé sans anomalie.</span></label><label class="task"><input type="checkbox"/><span>Plan, schéma électrique et fiche de validation sont remis.</span></label>
+        <h3>
+          Compte rendu des essais
+        </h3>
+        <textarea placeholder="Mesures, durée d’essai, anomalies, corrections et validation de l’enseignant…"></textarea>
+      </section>
+    </main>
+    <footer>
+      Projet Première SI · 11 élèves · 16 heures · Batterie 12 V · Ø maximal 200 mm
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

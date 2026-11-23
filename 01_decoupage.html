@@ -1,1 +1,134 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>1 — Découpage général</title><link rel="stylesheet" href="style.css"></head><body><header><h1>Vitrine de Noël interactive — Première SI</h1><p>Organisation des équipes et calendrier</p></header><nav><a class="" href="index.html">Accueil</a><a class="active" href="01_decoupage.html">1 · Découpage</a><a class="" href="02_ressources.html">2 · À fournir</a><a class="" href="03_carrousel.html">3 · Carrousel</a><a class="" href="04_automates.html">4 · Automates</a><a class="" href="05_guirlande.html">5 · Guirlande</a><a class="" href="06_integration.html">6 · Intégration</a></nav><main><div class="christmas-banner">Projet collectif · Créativité, technologie et magie de Noël</div><div class="tools"><button onclick="sauvegarder()">Enregistrer mes réponses (HTML)</button><button class="secondary" onclick="imprimer()">Imprimer / PDF</button></div><h2>1 — Découpage général</h2><section><h2>Équipes et responsabilités</h2><div class="scroll"><table><thead><tr><th>Équipe</th><th>Élèves</th><th>Rôles</th><th>Livrables</th></tr></thead><tbody><tr><td>A · Carrousel</td><td>3</td><td>A1 : CAO ; A2 : fabrication ; A3 : moteur et commande</td><td>Carrousel tournant, plans, DXF, code</td></tr><tr><td>B · Automates</td><td>4</td><td>Deux binômes : chacun conçoit, fabrique et anime un personnage</td><td>Cerf et nounours animés</td></tr><tr><td>C · Guirlande</td><td>2</td><td>C1 : implantation/câblage ; C2 : programmation/essais</td><td>Guirlande ESP32 et 3 effets</td></tr><tr><td>D · Intégration</td><td>2</td><td>D1 : socle/CAO ; D2 : alimentation/interfaces</td><td>Structure, distribution, intégration</td></tr></tbody></table></div><p>Chaque élève participe également aux essais, aux décisions techniques et à la restitution.</p></section><section><h2>Calendrier de 16 heures</h2><div class="scroll"><table><thead><tr><th>Semaine</th><th>Activités communes</th><th>Jalon</th></tr></thead><tbody><tr><td>S1 · 4 h</td><td>Analyse, choix techniques, croquis, essais élémentaires</td><td>Interfaces et encombrement figés</td></tr><tr><td>S2 · 4 h</td><td>CAO, prototypes, premiers programmes</td><td>DXF et premiers tests validés</td></tr><tr><td>S3 · 4 h</td><td>Découpe, montage, câblage, essais séparés</td><td>Sous-systèmes opérationnels</td></tr><tr><td>S4 · 4 h</td><td>Intégration, sécurité, corrections, dossier et oraux</td><td>Vitrine fonctionnelle et présentée</td></tr></tbody></table></div></section><section><h2>Interfaces à communiquer dès S1</h2><div class="scroll"><table><thead><tr><th>Donnée</th><th>Responsable</th><th>Destinataire</th></tr></thead><tbody><tr><td>Dimensions et encombrement</td><td>A, B, C</td><td>D</td></tr><tr><td>Points de fixation</td><td>A, B, C</td><td>D</td></tr><tr><td>Tension et courant prévus</td><td>A, B, C</td><td>D</td></tr><tr><td>Position des câbles et connecteurs</td><td>A, B, C</td><td>D</td></tr><tr><td>Volume disponible et règles communes</td><td>D</td><td>A, B, C</td></tr></tbody></table></div></section><section><h2>Suivi collectif</h2><label class="task"><input type="checkbox"> <span>S1 : cahier des charges et interfaces validés</span></label><label class="task"><input type="checkbox"> <span>S2 : modèles et prototypes vérifiés</span></label><label class="task"><input type="checkbox"> <span>S3 : trois sous-systèmes testés séparément</span></label><label class="task"><input type="checkbox"> <span>S4 : intégration, sécurité, dossier et oraux terminés</span></label><h3>Décisions communes</h3><textarea placeholder="Noter les décisions, dimensions et modifications…"></textarea></section></main><footer>Projet Première SI · 11 élèves · 16 heures · Batterie 12 V · Ø maximal 200 mm</footer><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>1 — Découpage général</title><link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>
+        Vitrine de Noël interactive — Première SI
+      </h1>
+      <p>
+        Organisation des équipes et calendrier
+      </p>
+    </header>
+    <nav>
+      <a class="" href="index.html">Accueil</a><a class="active" href="01_decoupage.html">1 · Découpage</a><a class="" href="02_ressources.html">2 · À fournir</a><a class="" href="03_carrousel.html">3 · Carrousel</a><a class="" href="04_automates.html">4 · Automates</a><a class="" href="05_guirlande.html">5 · Guirlande</a><a class="" href="06_integration.html">6 · Intégration</a>
+    </nav>
+    <main>
+      <div class="christmas-banner">
+        Projet collectif · Créativité, technologie et magie de Noël
+      </div>
+      <div class="tools">
+        <button onclick="sauvegarder()">Enregistrer mes réponses (HTML)</button><button class="secondary" onclick="imprimer()">Imprimer / PDF</button>
+      </div>
+      <h2>
+        1 — Découpage général
+      </h2>
+      <section>
+        <h2>
+          Équipes et responsabilités
+        </h2>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Équipe</th><th>Élèves</th><th>Rôles</th><th>Livrables</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>A · Carrousel</td><td>3</td><td>A1 : CAO ; A2 : fabrication ; A3 : moteur et commande</td><td>Carrousel tournant, plans, DXF, code</td>
+              </tr>
+              <tr>
+                <td>B · Automates</td><td>4</td><td>Deux binômes : chacun conçoit, fabrique et anime un personnage</td><td>Cerf et nounours animés</td>
+              </tr>
+              <tr>
+                <td>C · Guirlande</td><td>2</td><td>C1 : implantation/câblage ; C2 : programmation/essais</td><td>Guirlande ESP32 et 3 effets</td>
+              </tr>
+              <tr>
+                <td>D · Intégration</td><td>2</td><td>D1 : socle/CAO ; D2 : alimentation/interfaces</td><td>Structure, distribution, intégration</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Chaque élève participe également aux essais, aux décisions techniques et à la restitution.
+        </p>
+      </section>
+      <section>
+        <h2>
+          Calendrier de 16 heures
+        </h2>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Semaine</th><th>Activités communes</th><th>Jalon</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>S1 · 4 h</td><td>Analyse, choix techniques, croquis, essais élémentaires</td><td>Interfaces et encombrement figés</td>
+              </tr>
+              <tr>
+                <td>S2 · 4 h</td><td>CAO, prototypes, premiers programmes</td><td>DXF et premiers tests validés</td>
+              </tr>
+              <tr>
+                <td>S3 · 4 h</td><td>Découpe, montage, câblage, essais séparés</td><td>Sous-systèmes opérationnels</td>
+              </tr>
+              <tr>
+                <td>S4 · 4 h</td><td>Intégration, sécurité, corrections, dossier et oraux</td><td>Vitrine fonctionnelle et présentée</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section>
+        <h2>
+          Interfaces à communiquer dès S1
+        </h2>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Donnée</th><th>Responsable</th><th>Destinataire</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Dimensions et encombrement</td><td>A, B, C</td><td>D</td>
+              </tr>
+              <tr>
+                <td>Points de fixation</td><td>A, B, C</td><td>D</td>
+              </tr>
+              <tr>
+                <td>Tension et courant prévus</td><td>A, B, C</td><td>D</td>
+              </tr>
+              <tr>
+                <td>Position des câbles et connecteurs</td><td>A, B, C</td><td>D</td>
+              </tr>
+              <tr>
+                <td>Volume disponible et règles communes</td><td>D</td><td>A, B, C</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section>
+        <h2>
+          Suivi collectif
+        </h2>
+        <label class="task"><input type="checkbox"> <span>S1 : cahier des charges et interfaces validés</span></label><label class="task"><input type="checkbox"> <span>S2 : modèles et prototypes vérifiés</span></label><label class="task"><input type="checkbox"> <span>S3 : trois sous-systèmes testés séparément</span></label><label class="task"><input type="checkbox"> <span>S4 : intégration, sécurité, dossier et oraux terminés</span></label>
+        <h3>
+          Décisions communes
+        </h3>
+        <textarea placeholder="Noter les décisions, dimensions et modifications…"></textarea>
+      </section>
+    </main>
+    <footer>
+      Projet Première SI · 11 élèves · 16 heures · Batterie 12 V · Ø maximal 200 mm
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,9 +1,276 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>4 — Automates animés</title><link rel="stylesheet" href="style.css"><style>
+<!DOCTYPE html>
+
+<html lang="fr">
+  <head>
+    <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>4 — Automates animés</title><link href="style.css" rel="stylesheet"/>
+    <style>
 .gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}.ref{border:1px solid #e3d7c4;border-radius:12px;background:#fff;padding:10px}.ref img{width:100%;height:195px;object-fit:contain;background:#faf8f2;border-radius:8px}.ref figcaption{font-size:13px;margin-top:8px}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:14px}.answer{margin:9px 0 15px}.answer label{display:block;font-weight:650;margin-bottom:5px}.smallnote{font-size:13px;color:#53675c}.stephead{display:flex;align-items:center;gap:12px}.num{display:inline-flex;align-items:center;justify-content:center;background:#b32638;color:white;border-radius:50%;width:34px;height:34px;font-weight:800;flex:none}@media(max-width:850px){.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.gallery,.twocol{grid-template-columns:1fr}.ref img{height:250px}}@media print{.gallery{grid-template-columns:repeat(4,1fr)}.ref img{height:125px}.ref{break-inside:avoid}}
-</style></head><body><header><h1>Vitrine de Noël interactive — Première SI</h1><p>Équipe B · 4 élèves · deux automates plats animés</p></header><nav><a href="index.html">Accueil</a><a href="01_decoupage.html">1 · Découpage</a><a href="02_ressources.html">2 · À fournir</a><a href="03_carrousel.html">3 · Carrousel</a><a class="active" href="04_automates.html">4 · Automates</a><a href="05_guirlande.html">5 · Guirlande</a><a href="06_integration.html">6 · Intégration</a></nav><main><div class="christmas-banner">Mission : donner vie à un cerf et à un nounours de Noël !</div><div class="tools"><button onclick="sauvegarder()">Enregistrer mes réponses (HTML)</button><button class="secondary" onclick="imprimer()">Imprimer / PDF</button></div><h2>4 — Concevoir et animer deux automates plats</h2><section><h2>Votre mission</h2><p>Vous êtes quatre élèves. Vous devez concevoir et fabriquer deux personnages de Noël en carton découpé au laser, puis les animer à l'aide de servomoteurs pilotés par Arduino ou ESP32. Les deux personnages devront tenir dans la vitrine commune de <strong>diamètre extérieur maximal 200 mm</strong>, en tenant compte de leurs mouvements et des autres éléments.</p><p><span class="pill">4 élèves</span><span class="pill">16 h</span><span class="pill">SolidWorks</span><span class="pill">Découpe laser</span><span class="pill">2 servomoteurs minimum</span></p><div class="warn">Les dessins ci-dessous sont des <strong>références visuelles</strong> : ils ne constituent pas des fichiers prêts à découper. Il faudra simplifier les formes, distinguer les parties mobiles et définir les articulations. La taille définitive dépendra de l'implantation validée avec l'équipe D.</div></section>
-<section><h2>1. Quatre références graphiques</h2><p>Comparez les deux styles de nounours et les deux représentations du cerf. Choisissez pour chaque automate une silhouette qui peut être découpée dans du carton sans éléments trop fins.</p><div class="gallery"><figure class="ref"><img src="2nd-Xmas-Bear.webp" alt="Nounours debout avec bonnet et écharpe, un bras levé"><figcaption><strong>Nounours 1 — debout</strong><br>Idée : faire saluer le bras levé.</figcaption></figure><figure class="ref"><img src="christmas-bear.webp" alt="Nounours assis avec bonnet et écharpe"><figcaption><strong>Nounours 2 — assis</strong><br>Idée : faire bouger une patte.</figcaption></figure><figure class="ref"><img src="cerf-2.png" alt="Silhouette noire d'un cerf de profil"><figcaption><strong>Cerf 1 — silhouette</strong><br>Idée : articuler une patte ou la tête.</figcaption></figure><figure class="ref"><img src="Cerf-de-Noel.jpg" alt="Père Noël sur un renne, dessin au trait"><figcaption><strong>Cerf 2 — scène illustrée</strong><br>Idée : simplifier le dessin avant découpe.</figcaption></figure></div><p class="smallnote">Conseil : le nounours debout et le cerf en silhouette sont les références les plus simples pour une première conception mécanique. Le dessin du Père Noël sur le renne est plus complexe et nécessite une simplification importante.</p><div class="twocol"><div class="answer"><label for="choixours">Référence retenue pour le nounours et justification</label><textarea id="choixours" placeholder="Choix, partie mobile, difficulté envisagée…"></textarea></div><div class="answer"><label for="choixcerf">Référence retenue pour le cerf et justification</label><textarea id="choixcerf" placeholder="Choix, partie mobile, difficulté envisagée…"></textarea></div></div></section>
-<section><h2>2. Répartition des quatre élèves</h2><div class="scroll"><table><thead><tr><th>Binôme</th><th>Mission</th><th>Responsabilités partagées</th><th>Validation</th></tr></thead><tbody><tr><td>B1 + B2</td><td>Nounours</td><td>CAO, découpe, assemblage, montage du servo, programmation et essais</td><td>Un mouvement fiable et répétable</td></tr><tr><td>B3 + B4</td><td>Cerf</td><td>CAO, découpe, assemblage, montage du servo, programmation et essais</td><td>Un mouvement fiable et répétable</td></tr><tr><td>Tous</td><td>Intégration</td><td>Interfaces mécaniques, branchements, tests simultanés et dossier technique</td><td>Deux automates fonctionnent ensemble</td></tr></tbody></table></div><p>Les deux élèves de chaque binôme doivent participer à la conception <em>et</em> aux essais de programmation.</p></section>
-<section><h2>3. Progression chronologique — 16 heures</h2><div class="scroll"><table><thead><tr><th>Semaine</th><th>Durée</th><th>Travaux attendus</th><th>Livrable / critère de réussite</th></tr></thead><tbody><tr><td rowspan="3"><strong>S1 — Analyser</strong></td><td>1 h</td><td>Observer les images, choisir les personnages et un mouvement simple par automate.</td><td>Choix argumentés</td></tr><tr><td>1 h 30</td><td>Dessiner les pièces fixes et mobiles, positionner les pivots et proposer une liaison servo–personnage.</td><td>Croquis des deux mécanismes</td></tr><tr><td>1 h 30</td><td>Tester un servo avec un programme minimal ; mesurer les débattements et transmettre les encombrements à D.</td><td>Servo testé, fiche d'interface</td></tr><tr><td rowspan="3"><strong>S2 — Concevoir</strong></td><td>2 h</td><td>Modéliser les pièces simplifiées sur SolidWorks, prévoir les pivots et les fixations.</td><td>Pièces CAO enregistrées</td></tr><tr><td>1 h</td><td>Préparer les fichiers DXF et vérifier les dimensions de découpe.</td><td>DXF exploitables</td></tr><tr><td>1 h</td><td>Découper un prototype d'articulation et tester les jeux.</td><td>Pivot libre sans blocage</td></tr><tr><td rowspan="3"><strong>S3 — Fabriquer</strong></td><td>1 h 30</td><td>Découper et assembler les deux automates.</td><td>Deux mécanismes mobiles</td></tr><tr><td>1 h 30</td><td>Fixer les servos, créer les liaisons mécaniques et programmer les mouvements.</td><td>Deux animations opérationnelles</td></tr><tr><td>1 h</td><td>Tester plusieurs cycles, corriger les frottements et limiter les angles.</td><td>Pas de collision ni de blocage</td></tr><tr><td rowspan="3"><strong>S4 — Valider</strong></td><td>1 h 30</td><td>Installer les personnages avec D et vérifier le fonctionnement simultané.</td><td>Encombrement respecté</td></tr><tr><td>1 h 30</td><td>Vérifier l'alimentation, finaliser les essais, les fichiers et les programmes commentés.</td><td>Dossier et tests complets</td></tr><tr><td>1 h</td><td>Préparer et présenter la démonstration de 5 minutes, participer à la restitution.</td><td>Présentation réalisée</td></tr></tbody></table></div></section>
-<section><h2>4. Questions de conception</h2><div class="answer"><label for="mouvement">Quels mouvements souhaitez-vous obtenir ?</label><textarea id="mouvement" placeholder="Ex. : le nounours salue, le cerf incline la tête…"></textarea></div><div class="answer"><label for="pivot">Où placer les axes de rotation et comment relier les servos aux pièces mobiles ?</label><textarea id="pivot" placeholder="Décrire les pivots, les palonniers, les tringleries…"></textarea></div><div class="answer"><label for="interfaces">Quelles dimensions, fixations et connexions devez-vous communiquer à l'équipe D ?</label><textarea id="interfaces" placeholder="Largeur, hauteur, profondeur, débattement, alimentation, emplacement des fils…"></textarea></div></section>
-<section><h2>5. Matériel et ressources nécessaires</h2><div class="scroll"><table><thead><tr><th>Fourni par l'enseignant</th><th>À réaliser par les élèves</th></tr></thead><tbody><tr><td>Quatre images de référence, carton et accès à la découpe laser</td><td>Silhouettes simplifiées, pièces CAO et DXF</td></tr><tr><td>Deux servomoteurs, palonniers, fixations et tringleries</td><td>Articulations, supports et mécanismes</td></tr><tr><td>Arduino ou ESP32, alimentation régulée adaptée aux servos, fils</td><td>Câblage de commande, essais et programme commenté</td></tr><tr><td>Programme minimal de test servo et tutoriel SolidWorks / DXF</td><td>Animations et protocole de validation</td></tr></tbody></table></div><div class="warn">Sécurité : ne jamais alimenter les servomoteurs directement en 12 V. Utiliser une tension régulée conforme à leur fiche technique, une masse commune avec la carte de commande et une alimentation capable de supporter les pointes de courant. Vérifier les branchements avant la mise sous tension.</div></section>
-<section><h2>6. Checklist de validation</h2><label class="task"><input type="checkbox"><span>Les deux références graphiques ont été choisies et justifiées.</span></label><label class="task"><input type="checkbox"><span>Les pièces fixes et mobiles sont identifiées.</span></label><label class="task"><input type="checkbox"><span>Les deux mécanismes sont modélisés sur SolidWorks.</span></label><label class="task"><input type="checkbox"><span>Les fichiers DXF et les pièces découpées sont disponibles.</span></label><label class="task"><input type="checkbox"><span>Les servomoteurs entraînent les personnages sans blocage.</span></label><label class="task"><input type="checkbox"><span>Les deux animations fonctionnent simultanément.</span></label><label class="task"><input type="checkbox"><span>Les mouvements restent dans l'encombrement prévu.</span></label><label class="task"><input type="checkbox"><span>Les programmes, les plans et les essais sont documentés.</span></label><h3>Observations et corrections</h3><textarea placeholder="Résultats des essais, problèmes rencontrés, modifications apportées…"></textarea></section></main><footer>Projet Première SI · 11 élèves · 16 heures · Batterie 12 V · Ø maximal 200 mm</footer><script src="app.js"></script></body></html>
+</style>
+  </head>
+  <body>
+    <header>
+      <h1>
+        Vitrine de Noël interactive — Première SI
+      </h1>
+      <p>
+        Équipe B · 4 élèves · deux automates plats animés
+      </p>
+    </header>
+    <nav>
+      <a href="index.html">Accueil</a><a href="01_decoupage.html">1 · Découpage</a><a href="02_ressources.html">2 · À fournir</a><a href="03_carrousel.html">3 · Carrousel</a><a class="active" href="04_automates.html">4 · Automates</a><a href="05_guirlande.html">5 · Guirlande</a><a href="06_integration.html">6 · Intégration</a>
+    </nav>
+    <main>
+      <div class="christmas-banner">
+        Mission : donner vie à un cerf et à un nounours de Noël !
+      </div>
+      <div class="tools">
+        <button onclick="sauvegarder()">Enregistrer mes réponses (HTML)</button><button class="secondary" onclick="imprimer()">Imprimer / PDF</button>
+      </div>
+      <h2>
+        4 — Concevoir et animer deux automates plats
+      </h2>
+      <section>
+        <h2>
+          Votre mission
+        </h2>
+        <p>
+          Vous êtes quatre élèves. Vous devez concevoir et fabriquer deux personnages de Noël en carton découpé au laser, puis les animer à l'aide de servomoteurs pilotés par Arduino ou ESP32. Les deux personnages devront tenir dans la vitrine commune de <strong>diamètre extérieur maximal 200 mm</strong>, en tenant compte de leurs mouvements et des autres éléments.
+        </p>
+        <p>
+          <span class="pill">4 élèves</span><span class="pill">16 h</span><span class="pill">SolidWorks</span><span class="pill">Découpe laser</span><span class="pill">2 servomoteurs minimum</span>
+        </p>
+        <div class="warn">
+          Les dessins ci-dessous sont des <strong>références visuelles</strong> : ils ne constituent pas des fichiers prêts à découper. Il faudra simplifier les formes, distinguer les parties mobiles et définir les articulations. La taille définitive dépendra de l'implantation validée avec l'équipe D.
+        </div>
+      </section>
+      <section>
+        <h2>
+          1. Quatre références graphiques
+        </h2>
+        <p>
+          Comparez les deux styles de nounours et les deux représentations du cerf. Choisissez pour chaque automate une silhouette qui peut être découpée dans du carton sans éléments trop fins.
+        </p>
+        <div class="gallery">
+          <figure class="ref">
+            <img alt="Nounours debout avec bonnet et écharpe, un bras levé" src="images/2nd-Xmas-Bear.webp"/>
+            <figcaption>
+              <strong>Nounours 1 — debout</strong><br/>Idée : faire saluer le bras levé.
+            </figcaption>
+          </figure>
+          <figure class="ref">
+            <img alt="Nounours assis avec bonnet et écharpe" src="images/christmas-bear.webp"/>
+            <figcaption>
+              <strong>Nounours 2 — assis</strong><br/>Idée : faire bouger une patte.
+            </figcaption>
+          </figure>
+          <figure class="ref">
+            <img alt="Silhouette noire d'un cerf de profil" src="images/cerf-2.png"/>
+            <figcaption>
+              <strong>Cerf 1 — silhouette</strong><br/>Idée : articuler une patte ou la tête.
+            </figcaption>
+          </figure>
+          <figure class="ref">
+            <img alt="Père Noël sur un renne, dessin au trait" src="images/Cerf-de-Noel.jpg"/>
+            <figcaption>
+              <strong>Cerf 2 — scène illustrée</strong><br/>Idée : simplifier le dessin avant découpe.
+            </figcaption>
+          </figure>
+        </div>
+        <p class="smallnote">
+          Conseil : le nounours debout et le cerf en silhouette sont les références les plus simples pour une première conception mécanique. Le dessin du Père Noël sur le renne est plus complexe et nécessite une simplification importante.
+        </p>
+        <div class="twocol">
+          <div class="answer">
+            <label for="choixours">Référence retenue pour le nounours et justification</label><textarea id="choixours" placeholder="Choix, partie mobile, difficulté envisagée…"></textarea>
+          </div>
+          <div class="answer">
+            <label for="choixcerf">Référence retenue pour le cerf et justification</label><textarea id="choixcerf" placeholder="Choix, partie mobile, difficulté envisagée…"></textarea>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>
+          2. Répartition des quatre élèves
+        </h2>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Binôme</th><th>Mission</th><th>Responsabilités partagées</th><th>Validation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>B1 + B2</td><td>Nounours</td><td>CAO, découpe, assemblage, montage du servo, programmation et essais</td><td>Un mouvement fiable et répétable</td>
+              </tr>
+              <tr>
+                <td>B3 + B4</td><td>Cerf</td><td>CAO, découpe, assemblage, montage du servo, programmation et essais</td><td>Un mouvement fiable et répétable</td>
+              </tr>
+              <tr>
+                <td>Tous</td><td>Intégration</td><td>Interfaces mécaniques, branchements, tests simultanés et dossier technique</td><td>Deux automates fonctionnent ensemble</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Les deux élèves de chaque binôme doivent participer à la conception <em>et</em> aux essais de programmation.
+        </p>
+      </section>
+      <section>
+        <h2>
+          3. Progression chronologique — 16 heures
+        </h2>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Semaine</th><th>Durée</th><th>Travaux attendus</th><th>Livrable / critère de réussite</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="3"><strong>S1 — Analyser</strong></td><td>1 h</td><td>Observer les images, choisir les personnages et un mouvement simple par automate.</td><td>Choix argumentés</td>
+              </tr>
+              <tr>
+                <td>1 h 30</td><td>Dessiner les pièces fixes et mobiles, positionner les pivots et proposer une liaison servo–personnage.</td><td>Croquis des deux mécanismes</td>
+              </tr>
+              <tr>
+                <td>1 h 30</td><td>Tester un servo avec un programme minimal ; mesurer les débattements et transmettre les encombrements à D.</td><td>Servo testé, fiche d'interface</td>
+              </tr>
+              <tr>
+                <td rowspan="3"><strong>S2 — Concevoir</strong></td><td>2 h</td><td>Modéliser les pièces simplifiées sur SolidWorks, prévoir les pivots et les fixations.</td><td>Pièces CAO enregistrées</td>
+              </tr>
+              <tr>
+                <td>1 h</td><td>Préparer les fichiers DXF et vérifier les dimensions de découpe.</td><td>DXF exploitables</td>
+              </tr>
+              <tr>
+                <td>1 h</td><td>Découper un prototype d'articulation et tester les jeux.</td><td>Pivot libre sans blocage</td>
+              </tr>
+              <tr>
+                <td rowspan="3"><strong>S3 — Fabriquer</strong></td><td>1 h 30</td><td>Découper et assembler les deux automates.</td><td>Deux mécanismes mobiles</td>
+              </tr>
+              <tr>
+                <td>1 h 30</td><td>Fixer les servos, créer les liaisons mécaniques et programmer les mouvements.</td><td>Deux animations opérationnelles</td>
+              </tr>
+              <tr>
+                <td>1 h</td><td>Tester plusieurs cycles, corriger les frottements et limiter les angles.</td><td>Pas de collision ni de blocage</td>
+              </tr>
+              <tr>
+                <td rowspan="3"><strong>S4 — Valider</strong></td><td>1 h 30</td><td>Installer les personnages avec D et vérifier le fonctionnement simultané.</td><td>Encombrement respecté</td>
+              </tr>
+              <tr>
+                <td>1 h 30</td><td>Vérifier l'alimentation, finaliser les essais, les fichiers et les programmes commentés.</td><td>Dossier et tests complets</td>
+              </tr>
+              <tr>
+                <td>1 h</td><td>Préparer et présenter la démonstration de 5 minutes, participer à la restitution.</td><td>Présentation réalisée</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section>
+        <h2>
+          4. Questions de conception
+        </h2>
+        <div class="answer">
+          <label for="mouvement">Quels mouvements souhaitez-vous obtenir ?</label><textarea id="mouvement" placeholder="Ex. : le nounours salue, le cerf incline la tête…"></textarea>
+        </div>
+        <div class="answer">
+          <label for="pivot">Où placer les axes de rotation et comment relier les servos aux pièces mobiles ?</label><textarea id="pivot" placeholder="Décrire les pivots, les palonniers, les tringleries…"></textarea>
+        </div>
+        <div class="answer">
+          <label for="interfaces">Quelles dimensions, fixations et connexions devez-vous communiquer à l'équipe D ?</label><textarea id="interfaces" placeholder="Largeur, hauteur, profondeur, débattement, alimentation, emplacement des fils…"></textarea>
+        </div>
+      </section>
+      <section>
+        <h2>
+          4 bis. Ressource technique — piloter un servomoteur
+        </h2>
+        <p>
+          Avant de réaliser les mouvements des personnages, étudiez le principe de commande d’un servomoteur avec une carte Arduino. Le même principe pourra être adapté à une carte ESP32 en tenant compte de son brochage et de sa bibliothèque de programmation.
+        </p>
+        <div class="twocol">
+          <div>
+            <h3>
+              Schéma de référence
+            </h3>
+            <figure class="ref">
+              <img src="images/arduino+servo.jpg" alt="Schéma de branchement d’une carte Arduino et d’un servomoteur" style="height:auto;max-height:340px;object-fit:contain"/>
+              <figcaption>
+                Schéma Arduino + servomoteur fourni par l’enseignant.
+              </figcaption>
+            </figure>
+            <p class="smallnote">
+              Si le schéma ne s'affiche pas, demander le fichier <code>arduino+servo.jpg</code> à l’enseignant.
+            </p>
+          </div>
+          <div>
+            <h3>
+              Vidéo d'accompagnement
+            </h3>
+            <p>
+              <a href="https://www.youtube.com/watch?v=uzCuJNgfakA&amp;t=1s" target="_blank" rel="noopener noreferrer">Visionner la vidéo YouTube sur la commande du servomoteur</a>
+            </p>
+            <p>
+              Après avoir étudié ces ressources, réalisez un premier essai avec un seul servomoteur, puis adaptez le programme pour commander le mouvement de votre personnage.
+            </p>
+            <div class="answer">
+              <label for="servo_branchement">Identifiez les trois connexions du servomoteur et indiquez leur rôle.</label><textarea id="servo_branchement" placeholder="Alimentation, masse, signal de commande…"></textarea>
+            </div>
+            <div class="answer">
+              <label for="servo_mouvement">Décrivez le mouvement à programmer et les angles de rotation retenus.</label><textarea id="servo_mouvement" placeholder="Position initiale, position finale, vitesse ou temporisation…"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="warn">
+          <strong>Avant tout branchement :</strong> vérifiez les caractéristiques du servomoteur et la tension d'alimentation. Ne le raccordez jamais directement à la batterie 12 V. Si le servo est alimenté séparément de la carte, reliez les masses des circuits de commande.
+        </div>
+      </section>
+      <section>
+        <h2>
+          5. Matériel et ressources nécessaires
+        </h2>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Fourni par l'enseignant</th><th>À réaliser par les élèves</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Quatre images de référence, carton et accès à la découpe laser</td><td>Silhouettes simplifiées, pièces CAO et DXF</td>
+              </tr>
+              <tr>
+                <td>Deux servomoteurs, palonniers, fixations et tringleries</td><td>Articulations, supports et mécanismes</td>
+              </tr>
+              <tr>
+                <td>Arduino ou ESP32, alimentation régulée adaptée aux servos, fils</td><td>Câblage de commande, essais et programme commenté</td>
+              </tr>
+              <tr>
+                <td>Programme minimal de test servo et tutoriel SolidWorks / DXF</td><td>Animations et protocole de validation</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="warn">
+          Sécurité : ne jamais alimenter les servomoteurs directement en 12 V. Utiliser une tension régulée conforme à leur fiche technique, une masse commune avec la carte de commande et une alimentation capable de supporter les pointes de courant. Vérifier les branchements avant la mise sous tension.
+        </div>
+      </section>
+      <section>
+        <h2>
+          6. Checklist de validation
+        </h2>
+        <label class="task"><input type="checkbox"/><span>Les deux références graphiques ont été choisies et justifiées.</span></label><label class="task"><input type="checkbox"/><span>Les pièces fixes et mobiles sont identifiées.</span></label><label class="task"><input type="checkbox"/><span>Les deux mécanismes sont modélisés sur SolidWorks.</span></label><label class="task"><input type="checkbox"/><span>Les fichiers DXF et les pièces découpées sont disponibles.</span></label><label class="task"><input type="checkbox"/><span>Les servomoteurs entraînent les personnages sans blocage.</span></label><label class="task"><input type="checkbox"/><span>Les deux animations fonctionnent simultanément.</span></label><label class="task"><input type="checkbox"/><span>Les mouvements restent dans l'encombrement prévu.</span></label><label class="task"><input type="checkbox"/><span>Les programmes, les plans et les essais sont documentés.</span></label>
+        <h3>
+          Observations et corrections
+        </h3>
+        <textarea placeholder="Résultats des essais, problèmes rencontrés, modifications apportées…"></textarea>
+      </section>
+    </main>
+    <footer>
+      Projet Première SI · 11 élèves · 16 heures · Batterie 12 V · Ø maximal 200 mm
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
