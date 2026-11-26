@@ -18,3 +18,14 @@
 .integration-grid article h3{margin:0 0 10px}
 @media(max-width:750px){.integration-grid{grid-template-columns:1fr}.material-grid{grid-template-columns:1fr}.material img{height:220px}}
 @media print{.material,.integration-grid article{break-inside:avoid}.material img{height:130px}.integration-grid article img{height:90px}}
+
+/* Guide guirlande : compléments de mise en page (charte Noël existante) */
+.smartphone-guide .architecture-noel{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;padding:17px;background:#f4f8f2;border:1px solid #d5e4d7;border-radius:12px;margin:14px 0}
+.architecture-noel span{padding:12px;background:#fff;border:1px solid #b9d1c0;border-radius:10px;text-align:center;font-weight:700;color:#14533d}
+.architecture-noel b{font-size:13px;color:#a52637}
+.architecture-noel small{font-weight:400;color:#5a6e60}
+.guide-steps{padding-left:24px}.guide-steps li{margin:10px 0;padding-left:4px}
+.code-pedago{background:#102e27;color:#f5f6ec;padding:18px;border-radius:10px;overflow-x:auto;white-space:pre;font:13px/1.6 Consolas,'Courier New',monospace}
+.smartphone-guide code:not(.code-pedago code){background:#f0f3ed;padding:1px 4px;border-radius:3px}
+.smartphone-guide .hero-figure img{max-height:570px;width:auto;max-width:100%;margin:auto}
+@media print{.code-pedago{white-space:pre-wrap;background:#f5f5f5!important;color:#111!important;border:1px solid #bbb}.smartphone-guide .hero-figure img{max-height:290px}}

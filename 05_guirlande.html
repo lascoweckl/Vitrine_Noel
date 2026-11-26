@@ -15,6 +15,7 @@
     </header>
     <nav>
       <a class="" href="index.html">Accueil</a><a class="" href="01_decoupage.html">1 · Découpage</a><a class="" href="02_ressources.html">2 · À fournir</a><a class="" href="03_carrousel.html">3 · Carrousel</a><a class="" href="04_automates.html">4 · Automates</a><a class="active" href="05_guirlande.html">5 · Guirlande</a><a class="" href="06_integration.html">6 · Intégration</a>
+      <a href="07_train_noel.html">7 · Train de Noël</a>
     </nav>
     <main>
       <div class="christmas-banner">
@@ -34,10 +35,10 @@
           Vous disposez d’une <strong>carte ESP32 Dev Module</strong>, d’un <strong>module de 8 relais</strong>, de <strong>8 douilles</strong> et de <strong>8 ampoules colorées fonctionnant sous 12 V</strong>. Réalisez une guirlande lumineuse animée pour la vitrine de Noël. L’ensemble est alimenté par une batterie 12 V.
         </p>
         <p>
-          Vous devez concevoir l’interconnexion des composants, choisir la disposition des ampoules dans la vitrine, câbler l’ensemble et programmer l’ESP32 avec l’IDE Arduino pour produire une belle animation lumineuse.
+          Vous devez concevoir l’interconnexion des composants, choisir la disposition des ampoules dans la vitrine, câbler l’ensemble et programmer l’ESP32 avec l’IDE Arduino pour produire une belle animation lumineuse. Vous réaliserez également une interface web accessible depuis un smartphone connecté au Wi-Fi de l’ESP32.
         </p>
         <p>
-          <span class="pill">2 élèves</span><span class="pill">16 heures</span><span class="pill">8 ampoules 12 V</span><span class="pill">8 relais</span><span class="pill">ESP32</span>
+          <span class="pill">2 élèves</span><span class="pill">16 heures</span><span class="pill">8 ampoules 12 V</span><span class="pill">8 relais</span><span class="pill">ESP32</span><span class="pill">Wi-Fi + smartphone</span>
         </p>
         <div class="warn">
           <strong>Attention :</strong> la batterie alimente les ampoules en 12 V, mais l’ESP32 ne doit jamais recevoir directement 12 V sur ses broches. Prévoir un convertisseur adapté et vérifier la tension d’alimentation, la compatibilité des entrées du module relais avec les sorties 3,3 V de l’ESP32, ainsi que les courants admissibles. Les relais doivent être adaptés au courant et au type de charge des ampoules.
@@ -93,7 +94,7 @@
                 <td>C1</td><td>Implantation des huit ampoules, schéma électrique, fixation des douilles et câblage 12 V.</td><td>Tests de commande, mesures et dossier.</td>
               </tr>
               <tr>
-                <td>C2</td><td>Repérage des broches ESP32, programmation des huit sorties et mise au point des séquences.</td><td>Contrôle du câblage, implantation et dossier.</td>
+                <td>C2</td><td>Repérage des broches ESP32, programmation des huit sorties, serveur web et interface smartphone.</td><td>Contrôle du câblage, implantation et dossier.</td>
               </tr>
             </tbody>
           </table>
@@ -103,53 +104,24 @@
         </p>
       </section>
       <section>
-        <h2>
-          3. Planning chronologique — 16 heures
-        </h2>
+        <h2>3. Planning chronologique — 16 heures</h2>
+        <p>Les travaux de câblage et de programmation se déroulent en parallèle dans le binôme. Les deux élèves participent aux validations.</p>
         <div class="scroll">
           <table>
-            <thead>
-              <tr>
-                <th>Semaine</th><th>Durée</th><th>Travaux à réaliser</th><th>Livrable / validation</th>
-              </tr>
-            </thead>
+            <thead><tr><th>Semaine</th><th>Durée</th><th>Travaux à réaliser</th><th>Livrable / validation</th></tr></thead>
             <tbody>
-              <tr>
-                <td rowspan="3"><strong>S1 — Analyser</strong></td><td>1 h</td><td>Identifier les quatre types de composants ; relever tensions, courants et bornes utiles.</td><td>Tableau de caractéristiques.</td>
-              </tr>
-              <tr>
-                <td>1 h 30</td><td>Proposer une disposition de 8 ampoules et la transmettre à l’équipe D.</td><td>Croquis d’implantation coté.</td>
-              </tr>
-              <tr>
-                <td>1 h 30</td><td>Élaborer un schéma de principe ; tester une sortie ESP32 et un relais sur une alimentation de laboratoire protégée.</td><td>Essai d’une ampoule commandée.</td>
-              </tr>
-              <tr>
-                <td rowspan="3"><strong>S2 — Concevoir</strong></td><td>1 h 30</td><td>Établir le schéma complet des 8 voies : commande, relais, ampoules et alimentation.</td><td>Schéma annoté validé.</td>
-              </tr>
-              <tr>
-                <td>1 h 30</td><td>Programmer une séquence simple : allumage successif puis extinction.</td><td>Premier programme commenté.</td>
-              </tr>
-              <tr>
-                <td>1 h</td><td>Tester les voies, repérer les connecteurs et vérifier les fixations des douilles.</td><td>Tableau de correspondance broche/relais/ampoule.</td>
-              </tr>
-              <tr>
-                <td rowspan="3"><strong>S3 — Réaliser</strong></td><td>1 h 30</td><td>Réaliser le câblage des huit ampoules et du module relais hors tension.</td><td>Câblage contrôlé.</td>
-              </tr>
-              <tr>
-                <td>1 h 30</td><td>Programmer plusieurs animations : chenillard, alternance, séquence festive.</td><td>Trois effets démontrés.</td>
-              </tr>
-              <tr>
-                <td>1 h</td><td>Tester toutes les voies, corriger les défauts et mesurer le courant total.</td><td>Fiche d’essais.</td>
-              </tr>
-              <tr>
-                <td rowspan="3"><strong>S4 — Intégrer</strong></td><td>1 h 30</td><td>Installer les douilles dans la vitrine avec D ; fixer les fils et raccorder la distribution.</td><td>Montage intégré.</td>
-              </tr>
-              <tr>
-                <td>1 h 30</td><td>Tester les effets avec l’alimentation générale, régler les temporisations et valider l’arrêt.</td><td>Guirlande fonctionnelle et sûre.</td>
-              </tr>
-              <tr>
-                <td>1 h</td><td>Finaliser schéma, code commenté, mesures et présentation de 5 minutes.</td><td>Dossier et oral.</td>
-              </tr>
+              <tr><td rowspan="3"><strong>S1 — Analyser</strong></td><td>1 h</td><td>Identifier ESP32, relais, douilles, ampoules ; relever tensions, courants et bornes.</td><td>Caractéristiques relevées.</td></tr>
+              <tr><td>1 h</td><td>Proposer l’implantation des huit lampes et coordonner avec l’équipe Intégration.</td><td>Croquis coté.</td></tr>
+              <tr><td>2 h</td><td>Tester une voie relais et une ampoule sur alimentation protégée ; faire fonctionner le point d’accès Wi-Fi de l’ESP32.</td><td>Une lampe commandée + réseau ESP32 visible.</td></tr>
+              <tr><td rowspan="3"><strong>S2 — Concevoir</strong></td><td>1 h 30</td><td>Établir le schéma des huit voies, les protections et le tableau GPIO/relais/ampoules.</td><td>Schéma validé.</td></tr>
+              <tr><td>1 h 30</td><td>Créer une première page HTML avec les huit commandes manuelles et les événements appui/relâchement.</td><td>Interface visible sur smartphone.</td></tr>
+              <tr><td>1 h</td><td>Relier une commande web au serveur ESP32 et vérifier le changement d’état d’une lampe.</td><td>Premier échange HTTP validé.</td></tr>
+              <tr><td rowspan="3"><strong>S3 — Réaliser</strong></td><td>1 h 30</td><td>Câbler les huit lampes et relais hors tension ; contrôler les connexions.</td><td>Câblage contrôlé.</td></tr>
+              <tr><td>1 h 30</td><td>Étendre les commandes web aux huit lampes ; gérer les appuis simultanés et les relâchements.</td><td>Mode Piano testé.</td></tr>
+              <tr><td>1 h</td><td>Développer les quatre séquences automatiques et le bouton Tout éteindre.</td><td>Modes démontrables.</td></tr>
+              <tr><td rowspan="3"><strong>S4 — Intégrer</strong></td><td>1 h 30</td><td>Installer les douilles dans la vitrine, fixer les fils et raccorder la distribution 12 V.</td><td>Guirlande intégrée.</td></tr>
+              <tr><td>1 h 30</td><td>Tester sur smartphone : manuel, automatique, changement de mode, arrêt ; vérifier les courants et la sécurité.</td><td>Fiche de recette signée.</td></tr>
+              <tr><td>1 h</td><td>Finaliser schéma, code commenté, captures d’écran, mesures et oral de 5 minutes.</td><td>Dossier technique et présentation.</td></tr>
             </tbody>
           </table>
         </div>
@@ -175,15 +147,113 @@
         </p>
         <textarea placeholder="Tensions, courants mesurés, vérifications…"></textarea>
       </section>
+      <section class="smartphone-guide" id="pilotage-smartphone">
+        <h2>5. Nouvelle mission — Piloter la guirlande par smartphone</h2>
+        <p>Le smartphone ne commande pas directement les relais : il affiche une page web fournie par l’ESP32. Chaque action sur cette page transmet une demande au serveur web de l’ESP32, qui décide quelles sorties commander.</p>
+        <figure class="hero-figure">
+          <img src="images/interface_guirlande_smartphone.png" alt="Exemple d’interface smartphone avec huit lampes, modes manuel et automatique, quatre séquences et arrêt général" loading="lazy"/>
+          <figcaption>Interface de référence : observez les fonctions à reproduire, puis développez votre propre page HTML.</figcaption>
+        </figure>
+        <h3>5.1 — Cahier des charges de l’interface</h3>
+        <div class="scroll">
+          <table>
+            <thead><tr><th>Élément visible</th><th>Comportement attendu</th><th>Vérification</th></tr></thead>
+            <tbody>
+              <tr><td>Adresse <code>192.168.4.1</code></td><td>Le smartphone se connecte au réseau Wi-Fi local de l’ESP32 puis ouvre cette adresse dans son navigateur (si cette IP est conservée).</td><td>La page s’affiche sans Internet.</td></tr>
+              <tr><td>Mode Piano (manuel)</td><td>Un appui sur L1 à L8 allume la lampe correspondante ; le relâchement l’éteint. Plusieurs appuis doivent pouvoir coexister.</td><td>Tester deux boutons simultanément.</td></tr>
+              <tr><td>Mode Automatique</td><td>Choisir une séquence S1 à S4 ; l’ESP32 anime les huit lampes sans appui continu.</td><td>Quatre effets distincts.</td></tr>
+              <tr><td>S1 — Vague</td><td>Allumages successifs avec un effet de propagation à définir.</td><td>Effet visible et reproductible.</td></tr>
+              <tr><td>S2 — Aller-retour</td><td>Déplacement du point lumineux d’une extrémité à l’autre, puis retour.</td><td>Inversion du sens.</td></tr>
+              <tr><td>S3 — Chenillard</td><td>Déplacement régulier d’un motif lumineux.</td><td>Motif identifiable.</td></tr>
+              <tr><td>S4 — Aléatoire</td><td>Choix pseudo-aléatoire de lampes ou de motifs.</td><td>Succession variée.</td></tr>
+              <tr><td>Tout éteindre</td><td>Interrompre immédiatement les animations logicielles et mettre les huit sorties à l’état éteint.</td><td>Fonctionne depuis tous les modes.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="warn"><strong>Important :</strong> « Tout éteindre » est une commande logicielle, pas un dispositif de coupure de sécurité. L’interrupteur général et le fusible de la batterie restent indispensables.</div>
+        <h3>5.2 — Architecture de communication à compléter</h3>
+        <div class="architecture-noel" role="img" aria-label="Smartphone, Wi-Fi, serveur web ESP32, GPIO, module huit relais et ampoules 12 volts">
+          <span>📱 Smartphone<br/><small>HTML + JavaScript</small></span><b>⇄ Wi-Fi / HTTP ⇄</b><span>ESP32<br/><small>Serveur web + programme Arduino</small></span><b>→ GPIO →</b><span>Module 8 relais<br/><small>Contacts de commutation</small></span><b>→</b><span>8 lampes 12 V<br/><small>Batterie protégée</small></span>
+        </div>
+        <p>Le navigateur envoie une commande (exemple de convention à définir : <code>/lampe?id=1&amp;etat=1</code>). L’ESP32 l’interprète, puis agit sur la sortie associée. La page HTML n’a pas accès directement aux GPIO.</p>
+        <h3>5.3 — Développement guidé, sans correction fournie</h3>
+        <ol class="guide-steps">
+          <li><strong>Créer le réseau Wi-Fi.</strong> Dans l’IDE Arduino, utiliser la bibliothèque <code>WiFi.h</code>, choisir un SSID et un mot de passe de test, puis afficher l’adresse IP dans le moniteur série.</li>
+          <li><strong>Démarrer un serveur web.</strong> Étudier le rôle de <code>WebServer.h</code>, de <code>server.on(...)</code>, de <code>server.begin()</code> et de <code>server.handleClient()</code>. Prévoir une route pour la page d’accueil et des routes pour les commandes.</li>
+          <li><strong>Créer l’interface HTML.</strong> Dessiner les huit boutons colorés L1 à L8, le choix du mode, les quatre séquences et « Tout éteindre ». Adapter la page aux écrans de smartphone.</li>
+          <li><strong>Ajouter le JavaScript.</strong> Étudier <code>pointerdown</code>, <code>pointerup</code> et <code>pointercancel</code> pour envoyer une commande à l’appui puis au relâchement. Utiliser une requête <code>fetch()</code> et gérer les échecs de communication.</li>
+          <li><strong>Traiter les requêtes dans l’ESP32.</strong> Lire le numéro de lampe et l’état demandé, contrôler les valeurs reçues, puis appliquer l’état aux relais. Identifier si le module est actif à l’état bas ou haut.</li>
+          <li><strong>Programmer les animations.</strong> Utiliser des variables d’état et <code>millis()</code> pour faire évoluer les séquences sans bloquer la réception des commandes web avec de longs <code>delay()</code>.</li>
+          <li><strong>Gérer les priorités.</strong> Le passage du mode automatique au mode manuel doit arrêter l’animation ; « Tout éteindre » doit rester prioritaire ; le changement de séquence doit être pris en compte sans attendre la fin d’une longue temporisation.</li>
+          <li><strong>Valider.</strong> Tester d’abord une LED ou un relais sur banc, puis les huit lampes, enfin l’ensemble dans la vitrine.</li>
+        </ol>
+        <h3>5.4 — Trame commentée à compléter : ESP32 / Arduino</h3>
+        <p>Cette trame indique l’organisation générale. Les élèves choisissent les GPIO utilisables, les routes HTTP, les états électriques et les algorithmes.</p>
+        <pre class="code-pedago"><code>#include &lt;WiFi.h&gt;
+#include &lt;WebServer.h&gt;
+
+// À compléter : identifiants du point d'accès
+// À compléter : tableau des 8 GPIO et état actif des relais
+// À compléter : variables mode, séquence, étape et temps précédent
+
+WebServer server(80);
+
+void setup() {
+  // 1. Initialiser les sorties dans l'état ÉTEINT
+  // 2. Démarrer le point d'accès Wi-Fi
+  // 3. Définir les routes HTTP : page, lampe, mode, séquence, arrêt
+  // 4. Démarrer le serveur web
+}
+
+void loop() {
+  server.handleClient(); // Recevoir les commandes du smartphone
+
+  // Si le mode automatique est actif :
+  //   comparer millis() à la date du dernier changement
+  //   calculer le motif lumineux de la séquence choisie
+  //   appliquer le motif aux 8 sorties
+  // Sans bloquer longtemps la boucle !
+}</code></pre>
+        <h3>5.5 — Trame commentée : HTML et JavaScript</h3>
+        <pre class="code-pedago"><code>&lt;!-- À reproduire huit fois, avec un numéro différent --&gt;
+&lt;button type="button" class="lampe" data-lampe="1"&gt;L1&lt;/button&gt;
+
+&lt;script&gt;
+  // 1. Sélectionner les boutons de lampes.
+  // 2. À pointerdown : envoyer « lampe n = allumée ».
+  // 3. À pointerup ou pointercancel : envoyer « lampe n = éteinte ».
+  // 4. Pour une requête : étudier fetch('/...').
+  // 5. Ajouter le choix du mode et des séquences S1 à S4.
+  // 6. Ajouter le bouton d'arrêt général.
+  // 7. Éviter qu'un glissement du doigt laisse une lampe allumée.
+&lt;/script&gt;</code></pre>
+        <p class="muted">Aide : <code>pointer</code> permet de traiter souris et écran tactile avec les mêmes événements. Prévoir un état sûr en cas de perte de connexion ou de redémarrage de l’ESP32.</p>
+        <h3>5.6 — Répartition du travail et questions à résoudre</h3>
+        <div class="scroll"><table><thead><tr><th>Élève C1</th><th>Élève C2</th><th>Travail commun</th></tr></thead><tbody><tr><td>Implantation, distribution 12 V, schéma et tableau des relais ; tests physiques.</td><td>Point d’accès, serveur HTTP, HTML/CSS/JavaScript et gestion des séquences.</td><td>Définir le protocole de commandes, tester chaque mode, documenter le montage et présenter les résultats.</td></tr></tbody></table></div>
+        <p>Quelles routes et quels paramètres HTTP votre interface utilisera-t-elle ?</p>
+        <textarea placeholder="Exemple : route, paramètres, réponse du serveur…"></textarea>
+        <p>Comment gérez-vous les appuis simultanés, le relâchement et la perte de communication ?</p>
+        <textarea placeholder="Événements tactiles, état des sorties, sécurité…"></textarea>
+        <p>Pourquoi <code>millis()</code> est-il préférable à un long <code>delay()</code> pour le mode automatique ?</p>
+        <textarea placeholder="Explication et proposition d'algorithme…"></textarea>
+        <h3>5.7 — Recette fonctionnelle sur smartphone</h3>
+        <label class="task"><input type="checkbox"/><span>Le smartphone rejoint le Wi-Fi de l’ESP32 et affiche la page web.</span></label>
+        <label class="task"><input type="checkbox"/><span>Les boutons L1 à L8 commandent chacun la bonne ampoule.</span></label>
+        <label class="task"><input type="checkbox"/><span>Deux boutons peuvent être maintenus simultanément ; les lampes s’éteignent au relâchement.</span></label>
+        <label class="task"><input type="checkbox"/><span>Les quatre séquences S1 à S4 sont distinctes et sélectionnables.</span></label>
+        <label class="task"><input type="checkbox"/><span>Changer de mode arrête correctement la séquence précédente.</span></label>
+        <label class="task"><input type="checkbox"/><span>« Tout éteindre » arrête les animations et éteint toutes les lampes.</span></label>
+        <label class="task"><input type="checkbox"/><span>Un redémarrage ou une déconnexion ne provoque pas d’allumage incontrôlé.</span></label>
+      </section>
       <section>
         <h2>
-          5. Sécurité et validation
+          6. Sécurité et validation
         </h2>
         <div class="warn">
           Le 12 V des ampoules passe par les contacts de puissance des relais. Les broches GPIO ne doivent alimenter ni les ampoules ni les bobines des relais directement. Le module doit posséder une interface de commande compatible avec l’ESP32. Les branchements et les protections sont vérifiés par l’enseignant avant la connexion à la batterie.
         </div>
         
-        <label class="task"><input type="checkbox"/><span>Les caractéristiques électriques sont vérifiées sur le matériel réel.</span></label><label class="task"><input type="checkbox"/><span>Les huit douilles sont correctement fixées et isolées.</span></label><label class="task"><input type="checkbox"/><span>Les huit voies relais sont repérées et commandables séparément.</span></label><label class="task"><input type="checkbox"/><span>La tension de l’ESP32 et celle du module relais sont adaptées.</span></label><label class="task"><input type="checkbox"/><span>Les circuits sont protégés et aucun fil nu n’est accessible.</span></label><label class="task"><input type="checkbox"/><span>Trois animations lumineuses sont opérationnelles.</span></label><label class="task"><input type="checkbox"/><span>Le fonctionnement simultané et l’arrêt général sont validés.</span></label><label class="task"><input type="checkbox"/><span>Schéma, programme commenté et fiche d’essais sont remis.</span></label>
+        <label class="task"><input type="checkbox"/><span>Les caractéristiques électriques sont vérifiées sur le matériel réel.</span></label><label class="task"><input type="checkbox"/><span>Les huit douilles sont correctement fixées et isolées.</span></label><label class="task"><input type="checkbox"/><span>Les huit voies relais sont repérées et commandables séparément.</span></label><label class="task"><input type="checkbox"/><span>La tension de l’ESP32 et celle du module relais sont adaptées.</span></label><label class="task"><input type="checkbox"/><span>Les circuits sont protégés et aucun fil nu n’est accessible.</span></label><label class="task"><input type="checkbox"/><span>Quatre animations lumineuses sont opérationnelles depuis le smartphone.</span></label><label class="task"><input type="checkbox"/><span>Le mode manuel, les appuis simultanés et l’arrêt général sont validés.</span></label><label class="task"><input type="checkbox"/><span>Schéma, programme commenté et fiche d’essais sont remis.</span></label>
         <h3>
           Résultats des essais
         </h3>

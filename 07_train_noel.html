@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>7 — Train de Noël piloté par smartphone</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .train-flow { padding: 18px; border: 1px solid #d5e5d8; background: #edf5ee; border-radius: 12px; font-weight: 700; text-align: center; line-height: 2; }
+      .train-code { background: #152b25; color: #f3f5e9; padding: 18px; border-radius: 10px; overflow-x: auto; font-size: 13px; line-height: 1.55; white-space: pre; }
+      .train-table-wrap { overflow-x: auto; }
+      .train-table-wrap td, .train-table-wrap th { padding: 10px; }
+      .train-question { padding: 10px 14px; border-left: 4px solid #c39237; background: #fff8e8; margin: 12px 0; }
+      .train-answer { display: block; width: 100%; min-height: 72px; border: 1px solid #cfdbd0; border-radius: 8px; padding: 10px; font: inherit; margin: 8px 0 16px; }
+      .train-step { color: #b32638; font-weight: 800; }
+      @media print { .train-code { background: #f0f0f0; color: #111; white-space: pre-wrap; } }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Vitrine de Noël interactive — Première SI</h1>
+      <p>Mission complémentaire · Train de Noël piloté par smartphone</p>
+    </header>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="01_decoupage.html">1 · Découpage</a>
+      <a href="02_ressources.html">2 · À fournir</a>
+      <a href="03_carrousel.html">3 · Carrousel</a>
+      <a href="04_automates.html">4 · Automates</a>
+      <a href="05_guirlande.html">5 · Guirlande</a>
+      <a href="06_integration.html">6 · Intégration</a>
+      <a class="active" href="07_train_noel.html">7 · Train de Noël</a>
+    </nav>
+    <main>
+      <div class="christmas-banner">🚂 Mission : concevoir une télécommande Web pour un train de Noël</div>
+      <div class="tools">
+        <button onclick="sauvegarder()">Enregistrer mes réponses (HTML)</button>
+        <button class="secondary" onclick="imprimer()">Imprimer / PDF</button>
+      </div>
+      <h2>7 — Train de Noël piloté par smartphone</h2>
+    <section>
+      <h2>Votre mission</h2>
+      <p>Fiche d’accompagnement — <strong>trame volontairement incomplète</strong>. Vous devez concevoir, compléter, tester et justifier votre programme. Aucune solution complète n’est fournie.</p>
+      <p>Depuis un smartphone connecté au réseau Wi-Fi de l’ESP32, créer une page Web permettant de <strong>démarrer et arrêter un train miniature</strong>, puis de régler sa vitesse si le matériel le permet. Le pilotage doit rester sûr en cas de perte de connexion.</p>
+
+    </section>
+    <section>
+      <h2>Ce que nous reprenons du projet WALL·E</h2>
+      <p>La chaîne de commande reste la même. Pour le train, un seul moteur suffit dans la version de base : nous n’utilisons pas les commandes gauche/droite du robot.</p>
+      <div class="train-flow">Bouton HTML → Événement JavaScript → Requête HTTP → Serveur ESP32 → Commande du moteur</div>
+
+    </section>
+    <section>
+      <h2>Architecture à compléter</h2>
+      <div class="train-flow">Smartphone → réseau Wi-Fi → page HTML/CSS/JavaScript → requête HTTP → ESP32 → interface de puissance → moteur du train</div>
+      <p>À représenter sous forme de schéma fonctionnel, en distinguant la commande et la puissance.</p>
+
+    </section>
+    <section>
+      <h2>Travail demandé</h2>
+      <ul>
+        <li>1. Dessiner l’interface de commande sur papier.</li>
+        <li>2. Compléter la page HTML.</li>
+        <li>3. Programmer les événements JavaScript.</li>
+        <li>4. Préparer le serveur Web ESP32.</li>
+        <li>5. Relier la réception des commandes au moteur.</li>
+        <li>6. Tester la sécurité d’arrêt.</li>
+      </ul>
+
+    </section>
+    <section>
+      <h2>Avant de commencer : matériel et sécurité</h2>
+      <p>Identifier la tension nominale du moteur, le courant maximal et le type de commande de puissance (pont en H, transistor/MOSFET, module moteur adapté).</p>
+      <p><strong>Ne jamais alimenter directement le moteur depuis une broche GPIO de l’ESP32.</strong> Prévoir une masse commune lorsque nécessaire et une alimentation adaptée. Le câblage exact dépend du train utilisé.</p>
+
+    </section>
+    <section>
+      <h2>Questions de préparation</h2>
+      <div class="train-question"><strong>1. Quelle différence faites-vous entre la partie commande et la partie puissance ?</strong></div>
+      <textarea class="train-answer" aria-label="Réponse 1" placeholder="Votre réponse..."></textarea>
+      <div class="train-question"><strong>2. Pourquoi une page HTML ne peut-elle pas alimenter directement un moteur ?</strong></div>
+      <textarea class="train-answer" aria-label="Réponse 2" placeholder="Votre réponse..."></textarea>
+      <div class="train-question"><strong>3. Quel comportement attendez-vous si le Wi-Fi est coupé pendant le déplacement ?</strong></div>
+      <textarea class="train-answer" aria-label="Réponse 3" placeholder="Votre réponse..."></textarea>
+
+    </section>
+    <section>
+      <h2>Étape 1 — Construire l’interface HTML</h2>
+      <p>HTML décrit les éléments de la page. CSS définit leur apparence. JavaScript gère les interactions. Commencez par une interface minimale, puis améliorez-la.</p>
+      <h3>Trame HTML à compléter · index.html</h3>
+      <pre class="train-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;fr&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+  &lt;title&gt;Train de Noël&lt;/title&gt;
+  &lt;style&gt;
+    /* TODO 1 : choisir les couleurs, marges et dimensions */
+    body { /* à compléter */ }
+    button { /* à compléter */ }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Train de Noël&lt;/h1&gt;
+  &lt;!-- TODO 2 : créer un bouton DÉMARRER (id=&quot;demarrer&quot;) --&gt;
+  &lt;!-- TODO 3 : créer un bouton ARRÊTER (id=&quot;arreter&quot;) --&gt;
+  &lt;!-- BONUS : ajouter un curseur de vitesse (id=&quot;vitesse&quot;) --&gt;
+  &lt;p id=&quot;etat&quot;&gt;État du train : à déterminer&lt;/p&gt;
+  &lt;script&gt;
+    // Le programme JavaScript sera écrit à l&#x27;étape 2.
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      <h3>À comprendre</h3>
+      <p>Un attribut <code>id</code> permet à JavaScript de retrouver un élément précis de la page. La balise <code>button</code> crée un bouton cliquable. L’élément <code>p</code> peut afficher un message d’état.</p>
+      <h3>Vérifications</h3>
+      <ul>
+        <li>Les deux boutons sont visibles.</li>
+        <li>Les identifiants sont différents.</li>
+        <li>La page est lisible sur smartphone.</li>
+        <li>Le curseur, s’il existe, possède une valeur minimale et maximale.</li>
+      </ul>
+      <p><strong>Question :</strong> Pourquoi doit-on utiliser le même identifiant dans le HTML et dans le JavaScript ?</p>
+      <textarea class="train-answer" aria-label="Réponse identifiant" placeholder="Votre réponse..."></textarea>
+
+    </section>
+    <section>
+      <h2>Étape 2 — Programmer les interactions JavaScript</h2>
+      <p>Associer les événements des boutons à des requêtes HTTP vers l’ESP32. Les noms de routes, les paramètres et les méthodes HTTP doivent être cohérents avec le programme Arduino.</p>
+      <p>Cette étape reste à réaliser par les élèves : la fiche source ne fournit pas de trame JavaScript complète.</p>
+      <textarea class="train-answer" aria-label="Travail JavaScript" placeholder="Noter ici les événements et les requêtes à prévoir..."></textarea>
+
+    </section>
+    <section>
+      <h2>Étape 3 — Préparer le programme ESP32</h2>
+      <p>L’ESP32 doit <strong>héberger la page</strong>, <strong>recevoir les requêtes</strong> et <strong>piloter l’interface de puissance</strong>. La trame ci-dessous donne l’organisation, mais laisse les fonctions essentielles à construire.</p>
+      <h3>Trame Arduino / ESP32 incomplète · train.ino</h3>
+      <pre class="train-code"><code>#include &lt;WiFi.h&gt;
+#include &lt;WebServer.h&gt;
+
+// TODO 11 : définir le nom et le mot de passe du Wi-Fi
+// TODO 12 : définir les broches selon VOTRE carte moteur
+
+WebServer serveur(80);
+
+void arreterTrain() {
+  // TODO 13 : placer la commande de puissance à l&#x27;arrêt
+}
+
+void demarrerTrain() {
+  // TODO 14 : activer le moteur de manière adaptée
+}
+
+void recevoirCommande() {
+  // TODO 15 : lire la commande reçue
+  // TODO 16 : vérifier qu&#x27;elle est autorisée
+  // TODO 17 : appeler demarrerTrain() ou arreterTrain()
+  // TODO 18 : envoyer une réponse HTTP au navigateur
+}
+
+void setup() {
+  Serial.begin(115200);
+  // TODO 19 : configurer les broches et arrêter le moteur
+  // TODO 20 : créer le point d&#x27;accès Wi-Fi
+  // TODO 21 : associer l&#x27;URL / à la page Web
+  // TODO 22 : associer /api/commande à recevoirCommande()
+  // TODO 23 : démarrer le serveur
+}
+
+void loop() {
+  serveur.handleClient();
+  // TODO 24 : vérifier régulièrement la sécurité d&#x27;arrêt
+}</code></pre>
+      <h3>Points de vigilance</h3>
+      <p>Les noms de routes, les méthodes HTTP et les paramètres transmis doivent être identiques côté JavaScript et côté ESP32. La partie puissance dépend du matériel : aucune broche n’est imposée dans cette fiche. Pour un moteur DC, la variation de vitesse peut utiliser le PWM, sous réserve d’un driver adapté.</p>
+      <h3>À compléter par l’équipe</h3>
+      <div class="train-table-wrap"><table><thead><tr><th>Élément</th><th>Votre choix</th></tr></thead><tbody>
+        <tr><td>Nom du réseau Wi-Fi</td><td contenteditable="true">À compléter</td></tr>
+        <tr><td>Adresse IP</td><td contenteditable="true">À compléter</td></tr>
+        <tr><td>Route de commande</td><td contenteditable="true">À compléter</td></tr>
+        <tr><td>Méthode HTTP</td><td contenteditable="true">À compléter</td></tr>
+        <tr><td>Module de puissance</td><td contenteditable="true">À compléter</td></tr>
+        <tr><td>Tension moteur</td><td contenteditable="true">À compléter</td></tr>
+      </tbody></table></div>
+
+    </section>
+    <section>
+      <h2>Étape 4 — Sécuriser, tester et expliquer</h2>
+      <h3>Une sécurité indispensable</h3>
+      <p>Sur WALL·E, l’ESP32 impose un arrêt si les commandes ne sont plus reçues pendant un délai défini. Pour un train, réfléchissez à une stratégie analogue : arrêt sur demande, mais aussi arrêt automatique si la communication disparaît.</p>
+      <p><strong>Cette sécurité doit être assurée par l’ESP32</strong>, pas seulement par l’affichage Web. Piste de travail : utiliser <code>millis()</code> pour mesurer le temps écoulé depuis la dernière commande valide, sans bloquer la boucle principale avec un long <code>delay()</code>. À vous de définir le délai et la manière de maintenir ou renouveler l’autorisation de marche.</p>
+      <h3>Plan de tests</h3>
+      <div class="train-table-wrap"><table><thead><tr><th>Essai</th><th>Résultat attendu</th><th>Observations</th></tr></thead><tbody>
+        <tr><td>Ouverture de la page</td><td>Interface affichée</td><td contenteditable="true">À compléter</td></tr>
+        <tr><td>Commande DÉMARRER</td><td>Train en mouvement</td><td contenteditable="true">À compléter</td></tr>
+        <tr><td>Commande ARRÊTER</td><td>Train immobile</td><td contenteditable="true">À compléter</td></tr>
+        <tr><td>Déconnexion Wi-Fi</td><td>Arrêt de sécurité</td><td contenteditable="true">À compléter</td></tr>
+        <tr><td>Curseur (bonus)</td><td>Vitesse modifiée</td><td contenteditable="true">À compléter</td></tr>
+      </tbody></table></div>
+      <h3>Livrables attendus</h3>
+      <ul>
+        <li>Un schéma fonctionnel de la chaîne de commande.</li>
+        <li>Une page HTML/CSS/JavaScript personnalisée et commentée.</li>
+        <li>Un programme ESP32 complété et commenté.</li>
+        <li>Un tableau de câblage correspondant au matériel réellement utilisé.</li>
+        <li>Un compte rendu des tests, y compris un test de sécurité.</li>
+      </ul>
+      <h3>Pour aller plus loin</h3>
+      <p>Ajouter un sens de marche inverse uniquement si le montage le permet, un témoin de connexion, une indication de vitesse, un éclairage de la locomotive ou une animation de Noël. Chaque évolution doit conserver l’arrêt de sécurité.</p>
+      <h3>Autoévaluation</h3>
+      <p><label><input type="checkbox"> Je sais expliquer le rôle de HTML / CSS / JavaScript.</label></p>
+      <p><label><input type="checkbox"> Je sais décrire le trajet d’une commande jusqu’au moteur.</label></p>
+      <p><label><input type="checkbox"> Je sais distinguer la consigne affichée et l’état réel du moteur.</label></p>
+      <p><label><input type="checkbox"> Je sais justifier la sécurité choisie.</label></p>
+
+    </section>
+      <p><a href="index.html">← Retour au sommaire</a></p>
+      <p><small>Document élève — adapté de l’architecture de la télécommande WALL·E V1 (ESP32, WebServer, HTML/CSS/JavaScript, commande HTTP, arrêt de sécurité). Les solutions sont volontairement absentes.</small></p>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
