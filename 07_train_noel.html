@@ -32,7 +32,7 @@
       <a class="active" href="07_train_noel.html">7 · Train de Noël</a>
     </nav>
     <main>
-      <div class="christmas-banner">🚂 Mission : concevoir une télécommande Web pour un train de Noël</div>
+      <div class="christmas-banner">🚂 Mission : concevoir et motoriser une locomotive de Noël, puis la piloter par smartphone</div>
       <div class="tools">
         <button onclick="sauvegarder()">Enregistrer mes réponses (HTML)</button>
         <button class="secondary" onclick="imprimer()">Imprimer / PDF</button>
@@ -41,8 +41,28 @@
     <section>
       <h2>Votre mission</h2>
       <p>Fiche d’accompagnement — <strong>trame volontairement incomplète</strong>. Vous devez concevoir, compléter, tester et justifier votre programme. Aucune solution complète n’est fournie.</p>
-      <p>Depuis un smartphone connecté au réseau Wi-Fi de l’ESP32, créer une page Web permettant de <strong>démarrer et arrêter un train miniature</strong>, puis de régler sa vitesse si le matériel le permet. Le pilotage doit rester sûr en cas de perte de connexion.</p>
+      <p>Après avoir conçu et motorisé la locomotive, depuis un smartphone connecté au réseau Wi-Fi de l’ESP32, créer une page Web permettant de <strong>démarrer et arrêter le train miniature</strong>, puis de régler sa vitesse si le matériel le permet. Le pilotage doit rester sûr en cas de perte de connexion.</p>
 
+    </section>
+    <section>
+      <h2>Première mission — Concevoir et réaliser la locomotive motorisée</h2>
+      <p>Avant de développer la télécommande sur smartphone, vous devez <strong>concevoir et fabriquer une locomotive miniature capable de se déplacer grâce à un moteur électrique</strong>. Cette réalisation mécanique fait partie intégrante du projet : il ne s’agit pas seulement de programmer une locomotive déjà construite.</p>
+      <h3>Travail de conception et de fabrication</h3>
+      <ol>
+        <li><strong>Analyser le besoin :</strong> déterminer les dimensions maximales de la locomotive et les contraintes de déplacement dans la vitrine de Noël.</li>
+        <li><strong>Imaginer une solution :</strong> réaliser un croquis coté de la locomotive, du châssis, des roues et de l’emplacement du moteur.</li>
+        <li><strong>Concevoir sur SolidWorks :</strong> modéliser les pièces à fabriquer et prévoir leur assemblage, la fixation du moteur et la transmission du mouvement aux roues.</li>
+        <li><strong>Fabriquer et assembler :</strong> préparer les fichiers de fabrication adaptés aux moyens disponibles, réaliser le châssis et monter les éléments mécaniques.</li>
+        <li><strong>Motoriser :</strong> installer un moteur ou motoréducteur adapté, puis réaliser un premier essai de déplacement avec une commande simple, avant le pilotage Wi-Fi.</li>
+        <li><strong>Vérifier :</strong> contrôler la stabilité, l’adhérence, la liberté de rotation des roues et l’absence de blocage.</li>
+      </ol>
+      <p><strong>À fournir par l’enseignant :</strong> moteur et fiche technique, matériaux et éléments de transmission disponibles, contraintes d’encombrement, gabarits éventuels et consignes de sécurité.</p>
+      <p><strong>Livrables :</strong> croquis coté, fichiers SolidWorks et fichiers de fabrication, locomotive assemblée, puis essai de déplacement réussi.</p>
+      <div class="train-question"><strong>Comment allez-vous transmettre le mouvement du moteur aux roues de la locomotive ? Justifiez votre solution.</strong></div>
+      <textarea class="train-answer" aria-label="Solution de transmission locomotive" placeholder="Votre proposition et votre justification..."></textarea>
+      <div class="train-question"><strong>Quels éléments doivent être vérifiés avant de connecter le moteur à la carte de commande ESP32 ?</strong></div>
+      <textarea class="train-answer" aria-label="Vérifications locomotive motorisée" placeholder="Vos vérifications..."></textarea>
+      <p><strong>Validation de cette première mission :</strong> la locomotive se déplace correctement lors d’un essai de motorisation. Vous pouvez alors passer à la commande par smartphone présentée dans les étapes suivantes.</p>
     </section>
     <section>
       <h2>Ce que nous reprenons du projet WALL·E</h2>
